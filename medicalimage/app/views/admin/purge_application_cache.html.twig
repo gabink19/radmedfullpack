@@ -1,0 +1,38 @@
+{% extends "admin/partial/layout_logged_in.html.twig" %}
+
+{% block title %}Purge Application Cache{% endblock %}
+{% block selected_page %}configuration{% endblock %}
+{% block selected_sub_page %}configuration{% endblock %}
+
+{% block body %}
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>{{ block('title') }}</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            {{ msg_page_notifications|raw }}
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel updateCheckerWrapper">
+                        <div class="x_title">
+                            <h2>Cache</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <p>Use this page to purge any application cache from the /cache/ folder. This includes any Twig templating cache (if you're making html changes) and routing cache.</p>
+                            <p>Application caching will be disabled if the _CONFIG_DEBUG constant in your _config.inc.php file is set to true.</p>
+                        </div>
+
+                        <a href="{{ ADMIN_WEB_ROOT }}/purge_application_cache/1" class="btn btn-primary">{{ t('purge_application_cache_purge_now', 'Purge Now') }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

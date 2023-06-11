@@ -1,0 +1,19 @@
+.active_downloads, .nav_active_downloads, .nav_manage_download_pages, .nav_account_packages, .nav_received_payments, .paid-account-option, .file-pending-reports, .nav_abuse_reports, .nav_subscriptions
+{
+    display: none !important;
+}
+
+.paid_account_expiry, .user_package_form .download_speed, .user_package_form .wait_between_downloads, .user_package_form .concurrent_downloads, .user_package_form .downloads_per_day
+{
+    display: none;
+}
+
+.serverAccessWrapper
+{
+    display: none !important;
+}
+
+.social_login_linkedin, .social_login_foursquare
+{
+    display: none !important;
+}

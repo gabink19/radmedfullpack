@@ -1,0 +1,216 @@
+{% extends "@core/admin/partial/layout_logged_in.html.twig" %}
+
+{% block title %}{{ pluginName }} Settings{% endblock %}
+{% block selected_page %}plugins{% endblock %}
+{% block selected_sub_page %}plugin_manage{% endblock %}
+
+{% block body %}
+<div class="row clearfix">
+    <div class="col_12">
+        <div class="widget clearfix">
+            <h2>{{ pluginName }} Settings</h2>
+            <div class="widget_inside">
+                {{ msg_page_notifications|raw }}
+                <form method="POST" action="{{ ADMIN_WEB_ROOT }}/plugin/filepreviewer/settings" name="pluginForm" id="pluginForm" autocomplete="off" enctype="multipart/form-data">
+                    <div class="clearfix col_12">
+                        <div class="col_4">
+                            <h3>Plugin State</h3>
+                            <p>Whether this plugin is enabled.</p>
+                        </div>
+                        <div class="col_8 last">
+                            <div class="form">
+                                <div class="clearfix alt-highlight">
+                                    <label>Plugin Enabled:</label>
+                                    <div class="input">
+                                        <select name="plugin_enabled" id="plugin_enabled" class="medium validate[required]">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if plugin_enabled == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix col_12">
+                        <div class="col_4">
+                            <h3>Image Previews</h3>
+                            <p>Whether to enable image previews and thumbnails. If enabled, thumbnails will be shown while browsing files aswell as when you click to view a file.</p>
+                        </div>
+                        <div class="col_8 last">
+                            <div class="form">
+                                <div class="clearfix alt-highlight">
+                                    <label>Show Images:</label>
+                                    <div class="input">
+                                        <select name="enable_preview_image" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if enable_preview_image == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix">
+                                    <label>Show Thumbnails:</label>
+                                    <div class="input">
+                                        <select name="preview_image_show_thumb" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if preview_image_show_thumb == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix alt-highlight">
+                                    <label>Auto Rotate Images:</label>
+                                    <div class="input">
+                                        <select name="auto_rotate" id="auto_rotate" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if auto_rotate == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <p class="text-muted">
+                                            If set to 'yes', image previews will be automatically rotated the correct way up (based on EXIF data).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix col_12">
+                        <div class="col_4">
+                            <h3>Document Previews</h3>
+                            <p>Whether to enable document previews. If enabled, the document will be shown using Google Docs after you click on the file.</p>
+                        </div>
+                        <div class="col_8 last">
+                            <div class="form">
+                                <div class="clearfix alt-highlight">
+                                    <label>Show Documents:</label>
+                                    <div class="input">
+                                        <select name="enable_preview_document" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if enable_preview_document == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix">
+                                    <label>Show PDF Thumbnails:</label>
+                                    <div class="input">
+                                        <select name="preview_document_pdf_thumbs" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if preview_document_pdf_thumbs == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <p class="text-muted">
+                                            Requires ImageMagick within PHP. Please contact your host to enable this.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix alt-highlight">
+                                    <label>File Extensions:</label>
+                                    <div class="input">
+                                        <input type="text" name="preview_document_ext" class="xxlarge" value="{{ preview_document_ext }}"/>
+                                        <p class="text-muted">
+                                            Default: doc,docx,xls,xlsx,ppt,pptx,pdf,pages,ai,psd,tiff,dxf,svg,eps,ps,ttf,otf,xps
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix col_12">
+                        <div class="col_4">
+                            <h3>Video Previews</h3>
+                            <p>Whether to enable video previews. If enabled, the video will be shown using JWPlayer after you click on the file.</p>
+                        </div>
+                        <div class="col_8 last">
+                            <div class="form">
+                                <div class="clearfix alt-highlight">
+                                    <label>Play Videos:</label>
+                                    <div class="input">
+                                        <select name="enable_preview_video" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if enable_preview_video == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix">
+                                    <label>File Extensions:</label>
+                                    <div class="input">
+                                        <input type="text" name="preview_video_ext" class="xxlarge" value="{{ preview_video_ext }}"/>
+                                        <p class="text-muted">
+                                            Default: mp4,flv,ogg
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix col_12">
+                        <div class="col_4">
+                            <h3>Audio Previews</h3>
+                            <p>Whether to enable audio previews. If enabled, the audio will be played using JWPlayer after you click on the file.</p>
+                        </div>
+                        <div class="col_8 last">
+                            <div class="form">
+                                <div class="clearfix alt-highlight">
+                                    <label>Play Audio:</label>
+                                    <div class="input">
+                                        <select name="enable_preview_audio" class="medium">
+                                            {% for k,yesNoOption in yesNoOptions %}
+                                                <option value="{{ k }}"{% if enable_preview_audio == k %} SELECTED{% endif %}>{{ yesNoOption }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix">
+                                    <label>File Extensions:</label>
+                                    <div class="input">
+                                        <input type="text" name="preview_audio_ext" class="xxlarge" value="{{ preview_audio_ext }}"/>
+                                        <p class="text-muted">
+                                            Default: mp3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix col_12">
+                        <div class="col_4 adminResponsiveHide">&nbsp;</div>
+                        <div class="col_8 last">
+                            <div class="clearfix">
+                                <div class="input no-label">
+                                    <input name="thumb_resize_method" type="hidden" value="cropped"/>
+                                    <input name="thumb_size_w" type="hidden" value="180"/>
+                                    <input name="thumb_size_h" type="hidden" value="150"/>
+                                    <input name="caching" type="hidden" value="1"/>
+                                    <input name="show_direct_link" type="hidden" value="0"/>
+                                    <input name="show_embedding" type="hidden" value="0"/>
+                                    <input name="image_quality" type="hidden" value="90"/>
+                                    <input name="watermark_enabled" type="hidden" value="0"/>
+
+                                    <input type="submit" value="Submit" class="button blue">
+                                    <input type="reset" value="Reset" class="button grey">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input name="submitted" type="hidden" value="1"/>
+                </form>
+            </div>
+        </div>   
+    </div>
+</div>
+{% endblock %}

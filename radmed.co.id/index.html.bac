@@ -1,0 +1,290 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="RadMED">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RadMED - Radiologi Mitra Medika</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.transitions.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/line-icon.css">
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<!-- <link rel="stylesheet" href="css/fontawesome2.min.css"> -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- header section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt=""></a> 
+      <!-- navigation section  -->
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#overview">Tentang</a></li>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#screens">Solusi</a></li>
+          <li><a href="#download">Mobile APPS</a></li>
+          <li><a href="https://radmed.id/novaweb">PACSRADMED</a></li>
+          <li><a href="http://image.radmed.co.id">TELERADMED</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    <!-- navigation section  --> 
+  </header>
+  <!-- banner text section-->
+  <div id="banner" class="container">
+    <div class="col-md-5 col-sm-12"> <img class="banner-img img-responsive" src="images/app-screen.png"> </div>
+    <div class="col-md-7 col-sm-12">
+      <div class="banner-text">
+        <h1>RadMED akan membantu mengumpulkan data medis terutama gambar medis dan membagikan gambar medis dan scan anda dengan ribuan dokter dan ratusan ribu pasien</h1>
+        <p></p>
+        <div class="banner-btn"><a href="#"><img src="images/apple-store-btn.png"></a> <a href="#"><img src="images/google-store-btn.png"></a> </div>
+      </div>
+      <!-- banner text section--> 
+      
+    </div>
+  </div>
+</section>
+<!-- header section --> 
+<!-- overview section -->
+<section id="overview" class="section overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="section-title">Memberdayakan Gambar Medis di seluruh Indonesia <span>Platform RadMED</span></h2>
+        <p class="section-intro">Platform berbagi gambar medis RadMED kami memastikan bahwa gambar dan laporan langsung tersedia untuk dokter, pasien, dan fasilitas pencitraan lainnya.. </p>
+      </div>
+      <div class="col-md-12 text-center overview-video">
+        <iframe 
+src="https://www.youtube.com/embed/k32xyP3KuWE?autoplay=0" frameborder="0" allowfullscreen > </iframe>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12 "> <span class="icon icon-browser"></span>
+        <div class="overview-content">
+          <h4>Upload Gambar</h4>
+          <p>Baik menelan jutaan studi pencitraan dari sistem PACS atau mengunggah studi individu dari CD, RadMED memiliki alat untuk memastikan bahwa gambar diunggah ke platform berbagi RadMED dengan cepat dan aman. </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 "> <span class="icon icon-trophy"></span>
+        <div class="overview-content">
+          <h4>Bagikan Gambar</h4>
+          <p>Dokter, pasien, dan mitra teleradiologi memerlukan akses ke gambar yang sama tetapi membagikannya dengan cara berbeda kepada orang yang berbeda. Baik mencari opini dari kolega medis atau berbagi kegembiraan bayi baru dengan keluarga, solusi kami dibuat untuk menjadi sederhana dan intuitif. </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 "> <span class="icon icon-lifesaver"></span>
+        <div class="overview-content">
+          <h4>Simpan Gambar</h4>
+          <p>Riwayat pencitraan Anda penting, tetapi Anda tidak pernah tahu kapan dan di mana Anda akan membutuhkannya. RadMED memastikan gambar Anda selalu ada di mana pun Anda berada. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- overview section --> 
+<!-- feature section 1 -->
+<section id="features" class="section features1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="section-title">Solusi RadMED untuk gambar medis dari semua <span>Jenis File dan Ukuran File</span></h2>
+        <p class="section-intro">Solusi RadMED dibangun di atas teknologi dasar RadmMED tunggal, yang berarti Anda dapat menerapkan satu atau lebih solusi berbagi gambar kami tergantung pada kebutuhan Anda. </p>
+      </div>
+    </div>
+    <div class="row features1-content-space">
+      <div class="col-md-4 col-sm-12">
+        <div class="features1-content left"> <span class="icon icon-upload"></span>
+          <h4>Radmed Untuk Pasien</h4>
+          <p>Berbagi gambar yang sederhana dan portabel untuk pasien. </p>
+        </div>
+        <div class="features1-content left"> <span class="icon icon-tools"></span>
+          <h4>Radmed Untuk Dokter</h4>
+          <p>Berbagi gambar dengan cepat dan aman untuk dokter. </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 middle"> <img class="img-responsive" src="images/feature-mobile.png"> </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="features1-content right"> <span class="icon icon-speedometer"></span>
+          <h4>Radmed Untuk TeleRad</h4>
+          <p>Produk dan layanan teleradiologi perusahaan. </p>
+        </div>
+        <div class="features1-content right"> <span class="icon icon-camera"></span>
+          <h4>Radmed Untuk MicroPACS</h4>
+          <p>MicroPACS sederhana berbasis langganan untuk modalitas tunggal atau klinik kecil. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- feature section 1 --> 
+
+<!-- feature section 2 -->
+<section id="features" class="section features2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" style="float:right;">
+        <div class="features2-content">
+          <h2 class="section-title">Completely flexible, create the landing page <span>you want</span></h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+          <ul>
+            <li><i class="fa fa-check"></i> Sed ut perspiciatis unde omnis </li>
+            <li><i class="fa fa-check"></i> iste natus error sit voluptatem accusantium </li>
+            <li><i class="fa fa-check"></i> doloremque laudantium, totam rem aperiam.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive" src="images/feature-screen2.png"> </div>
+    </div>
+  </div>
+</section>
+<!-- feature section 2 --> 
+
+<!-- feature section 3 -->
+<section id="features" class="section features3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="features2-content">
+          <h2 class="section-title">Super flexible and very easy to modify your <span>app screen</span></h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive" src="images/feature-screen3.png"> </div>
+    </div>
+  </div>
+</section>
+<!-- feature section 3 --> 
+
+<!-- screen shots slider section-->
+<section id="screens" class="section screens">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="section-title">A landing page for the <span>next generation</span></h2>
+        <p class="section-intro">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. </p>
+      </div>
+    </div>
+  </div>
+  <!-- owl-carousel starts -->
+  <div id="owl-demo" class="owl-carousel">
+    <div class="item"><img src="images/app-screen/screen1.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen2.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen3.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen4.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen5.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen6.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen7.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen2.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen5.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen1.jpg"></div>
+    <div class="item"><img src="images/app-screen/screen6.jpg"></div>
+  </div>
+  <!-- owl-carousel starts --> 
+</section>
+<!-- screen shots slider section --> 
+
+<!--subscribe section -->
+<section id="download" class="section subscribe">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2>Dapatkan Unduhan Aplikasi RadMED Anda</h2>
+        <p>Aplikasi Pasien di peruntukan untuk kemudahan pasien dalam mengelola rekam jejak medical image</p>
+        <div  class="banner-btn"> <a href="#"><img src="images/apple-store-btn.png"></a> <a href="#" class="banner-btn"><img src="images/google-store-btn.png"></a></div>
+        <p>Aplikasi Dokter di peruntukan untuk kemudahan dokter dalam mengelola pasien. </p>
+        <div  class="banner-btn"> <a href="#"><img src="images/apple-store-btn.png"></a> <a href="#" class="banner-btn"><img src="images/google-store-btn.png"></a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center subscribe-form">
+        <h3 class="subscribe-title">Tetap terinformasi dengan buletin kami</h3>
+        <!-- subscribe form -->
+        <form method="post" action="php/subscribe.php" name="subscribeform" id="subscribeform">
+          <input type="text" name="email" placeholder="Enter your email address to get notified" id="subemail" />
+          <input type="submit" name="send" value="Notify me" id="subsubmit" class="btn2" />
+        </form>
+        <!-- subscribe message -->
+        <div id="mesaj"></div>
+        <!-- subscribe message --> 
+      </div>
+      <!-- subscribe form --> 
+    </div>
+  </div>
+</section>
+<!--subscribe section --> 
+
+<!--contact section -->
+
+<section id="contact" class="section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 ">
+        <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
+       <h2 class="section-title"><span>PT RADIOLOGI MITRA MEDIKA</span></h2>
+        <p >JL Ps Jumat Raya No 38A, Pondok Pinang, Jakarta Selatan, DKI Jakarta, INDONESIA 12310</p>
+         </div>
+    </div>
+    
+    <!--contact form start-->
+    <div class="col-md-6 col-md-offset-3 conForm">
+      <div id="message"></div>
+      <form method="post" action="php/contact.php" name="cform" id="cform">
+        <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Nama Lengkap..." >
+        <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Alamat Email..." >
+        <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Jelaskan disini..."></textarea>
+        <input type="submit" id="submit" name="send" class="submitBnt" value="Kirim">
+        <div id="simple-msg"></div>
+      </form>
+    </div>
+    <!--contact form end--> 
+  </div>
+</section>
+
+<!--contact section --> 
+<!-- footer section-->
+<footer class="section footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col-md-12">
+        <p>
+        <ul class="footer-share">
+          <li><a href="https://api.whatsapp.com/send?phone=6281221008400" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+          <li><a href="https://www.facebook.com/radmedofficial" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/radmedofficial" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/radmedofficial" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/radmedofficial" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://www.youtube.com/in/radmedofficial" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+          
+        </ul>
+       
+        <p style="margin-top: 30px">©2020 RadMED Bermitra Dengan DISANA</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer section--> 
+<!-- Include JS files --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.fancybox.pack.js"></script> 
+<script src="js/retina.min.js"></script> 
+<script src="js/modernizr.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/jquery.subscribe.js"></script> 
+<script src="js/jquery.contact.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

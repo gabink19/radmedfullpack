@@ -1,0 +1,51 @@
+{% extends "account/partial/layout_non_login.html.twig" %}
+
+{% block title %}{{ t("error_page_name", "Error") }}{% endblock %}
+{% block description %}{{ t("error_meta_description", "Error") }}{% endblock %}
+{% block keywords %}{{ t("error_meta_keywords", "error, image, picture, pic, img, hosting, sharing, upload, storage, site, website") }}{% endblock %}
+{% block html_element_class %}login-page-wrapper{% endblock %}
+
+{% block body %}
+<body class="page-body login-page login-form-fall register-page">
+        <div class="login-container">
+            <div class="login-header login-caret">
+                <div class="login-content">
+                    <a href="{{ CORE_SITE_PATH }}" class="logo">
+                        <img src="{{ theme.getMainLogoUrl() }}" alt="{{ SITE_CONFIG_SITE_NAME }}" alt="{{ SITE_CONFIG_SITE_NAME }}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="login-progressbar">
+                <div></div>
+            </div>
+            <div class="login-form">
+                <div class="login-content">
+                    <div class="login-main-box">
+                        <div class="alert alert-danger">
+                            <strong>{{ t("error", "error")|title }}!</strong><br/>
+                            {{ error_msg }}
+                        </div>
+
+                        <div class="ajax-error-image" style="width: 300px; height: 260px; min-height: 260px; display: inline-block;"><!-- --></div>
+                        
+                        <p class="description"></p>
+
+                        <div class="login-bottom-links">
+                            <a href="#" class="link" onclick="window.history.back(); return false;"><i class="entypo-lock"></i> {{ t("return_to_previous_page", "return to previous page")|title }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% embed "account/partial/non_login_footer_links.html.twig" %}{% endembed %}
+            </div>
+        </div>
+        <!-- Bottom Scripts -->
+        <script src="{{ theme.getAccountJsPath() }}/gsap/main-gsap.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/bootstrap.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/joinable.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/resizeable.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/evolution-api.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/jquery.validate.min.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/evolution-login.js"></script>
+        <script src="{{ theme.getAccountJsPath() }}/custom.js"></script>
+    </body>
+{% endblock %}

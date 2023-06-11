@@ -1,0 +1,38 @@
+body {
+    /*background-color: black;*/
+    /*color: white;*/
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    color:white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.row-mlx {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-mlx {
+    display: inline-block;
+    border: 2px solid white;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 4px !important;
+    /*line-height: 50px;*/
+}

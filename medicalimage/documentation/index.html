@@ -1,0 +1,922 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>uCloud v2.0.1 - Securely Manage, Preview & Share Your Files</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Adam Wilson - MFScripts">
+	<meta name="copyright" content="Adam Wilson - MFScripts">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2016-03-18T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/cufon.js"></script><script src="assets/js/font.js"></script><script>Cufon.replace("h1, h2, h3, h4, h5, h6");</script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#1A8FBF;}
+		::selection{background:#333636;color:#1A8FBF;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;http://static.revaxarts-themes.com/noise.gif}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#1A8FBF;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#1A8FBF;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-cloudable-v12">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#welcome" title="Welcome">Welcome</a></li>
+			<li><a href="#features" title="Features">Features</a></li>
+			<li><a href="#support" title="Support">Support</a></li>
+			<li><a href="#system_requirements" title="System Requirements">System Requirements</a></li>
+			<li><a href="#installation" title="Installation">Installation</a></li>
+			<li><a href="#cron_tasks" title="Cron Tasks">Cron Tasks</a></li>
+			<li><a href="#upgrading" title="Upgrading">Upgrading</a></li>
+			<li><a href="#website_settings" title="Website Settings">Website Settings</a></li>
+			<li><a href="#add_a_new_language" title="Add A New Language">Add A New Language</a></li>
+			<li><a href="#creating_a_new_theme" title="Creating A New Theme">Creating A New Theme</a></li>
+			<li><a href="#adv_performance_tuning" title="Adv Performance Tuning">Adv Performance Tuning</a></li>
+			<li><a href="#troubleshooting" title="TroubleShooting">TroubleShooting</a></li>
+			<li><a href="#changelog" title="Changelog">Changelog</a></li>
+			<li><a href="#license_credits" title="License & Credits">License & Credits</a></li>
+			<li><a href="#wrap_up" title="Wrap Up">Wrap Up</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Adam Wilson - MFScripts 2020
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>uCloud v2.0.1</h1>
+	<h2>Securely Manage, Preview & Share Your Files</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>Latest Update: 27th August 2020</li>
+	<li>Author: Adam Wilson - <a href="https://mfscripts.com" target="_blank">MFScripts</a></li>
+	<li><a href=""></a></li>
+	<li>Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#109;&#102;&#115;&#99;&#114;&#105;&#112;&#116;&#115;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#109;&#102;&#115;&#99;&#114;&#105;&#112;&#116;&#115;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for purchasing uCloud. If you have any questions that are beyond the scope of this help file, please feel free to log a support request via our support portal. Thanks so much!</p>
+	</section>
+	
+	<section id="welcome">
+	<div class="page-header"><h3>Welcome</h3><hr class="notop"></div>
+<p>
+	uCloud is a fully featured, quick and secure file manager.</p>
+<p>
+	<img alt="" src="assets/images/image_11.jpg" style="width: 900px; height: 388px;"></p>
+<p>
+	It&#39;s been built for users and businesses who which to quickly organise, manage and share their files via a web browser.</p>
+<p>
+	You can <strong>upload large files (&gt;5GB)</strong> with built in file chunking, manage files into folders, set folder/file passwords and/or access permissions, preview a huge amount of files directly within the browser, resize images, setup multiple users, expand using multiple file server storage and manage everything via the feature rich admin area.</p>
+<p>
+	uCloud has been designed to be easy to install, the config file and database is automatically created during the installation wizard. You simply need a web hosting account and one free MySQL database (no programming knowledge is required).</p>
+<p>
+	If you have any issues with installation or even after you&#39;ve started using the script, please leave a comment via CodeCanyon and we will get back to you as soon as possible.</p>
+<p>
+	uCloud has been built using our own internal framework that is extremely robust and efficient. We&#39;ve been using it on all our scripts at MFScripts for over 7 years! It&#39;s well tested by over 4,200 users.</p>
+<p>
+	Whenever we release a new version of uCloud you&#39;ll be notified via the script admin area of the new release. If you&#39;re still within your support period you can download it free of charge via CodeCanyon.</p>
+<p>
+	Please note: If you modify the code and upgrade may overwrite your own code changes. You should make note of any changes you make so you can easily re-apply them if needed.</p>
+</section>
+<section id="features">
+	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
+<p>
+	These are the primary features of uCloud:</p>
+<ul>
+	<li>
+		<strong>Upload Files:</strong>
+		<ul>
+			<li>
+				Multi-file uploader with progress.</li>
+			<li>
+				Images previewed before upload. File icons shown for each file before upload.</li>
+			<li>
+				Percentage progress, size remaining, upload speed and time remaining.</li>
+			<li>
+				Background uploading of files. Continue to manage your account while files are being uploaded.</li>
+			<li>
+				Drag &amp; Drop into the browser to begin uploading. (Firefox &amp; Chrome)</li>
+			<li>
+				Send via email option once uploaded.</li>
+			<li>
+				Copy folder url to the clipboard link.</li>
+			<li>
+				Built in url shortener.</li>
+			<li>
+				Support for multiple file servers.</li>
+			<li>
+				File details page with the following:
+				<ul>
+					<li>
+						Full path to the file.</li>
+					<li>
+						HTML code to directly copy into a website.</li>
+					<li>
+						Forum code to directly copy into a forum.</li>
+					<li>
+						Link to view statistics for the file.</li>
+					<li>
+						Link to remove the file.</li>
+					<li>
+						Links to share with common social media sites; Facebook, Twitter etc.</li>
+					<li>
+						Link to share via email.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<strong>File Manager:</strong>
+		<ul>
+			<li>
+				Built using ajax so the entire file manager is lightning fast!</li>
+			<li>
+				Thumbnails generated for images &amp; pdf files (requires imagemagick)</li>
+			<li>
+				File previews for a huge amount of files:
+				<ul>
+					<li>
+						Images - jpg, jpeg, png, gif (static), wbmp</li>
+					<li>
+						Documents - doc, docx, xls, xlsx, ppt, pptx, pdf, pages, ai, psd, tiff, dxf, svg, eps, ps, ttf, otf, xps</li>
+					<li>
+						Videos - mp4, flv, ogg</li>
+					<li>
+						Audio - mp3</li>
+				</ul>
+			</li>
+			<li>
+				Caching of image thumbnails for fast load times.</li>
+			<li>
+				Right-click menu options on each file &amp; folder to quickly manage the options.</li>
+			<li>
+				Powerful search widget. Quickly shows you files and folders which match your search.</li>
+			<li>
+				Advanced search to find files by upload date and folder.</li>
+			<li>
+				Requires account to upload and manage files. (admin controlled)</li>
+			<li>
+				2 view options for files:
+				<ul>
+					<li>
+						Icon view - showing file thumbnails.</li>
+					<li>
+						List view.</li>
+				</ul>
+			</li>
+			<li>
+				Full screen mode.</li>
+			<li>
+				Sort file listing by filename, file size, date uploaded, last access and total downloads.</li>
+			<li>
+				Change the amount of files shown per page.</li>
+			<li>
+				Download an entire folder as a zip file.</li>
+			<li>
+				Duplicate file(s) option.</li>
+			<li>
+				Rename, move &amp; delete file options.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>File Downloads:</strong>
+		<ul>
+			<li>
+				Built in support for xSendFile &amp; xAccelRedirect! Big improvements on server performance if enabled.</li>
+			<li>
+				Files are stored securely on your web host. They are renamed without the extension on upload and placed inside a folder which can&#39;t be accessed directly.</li>
+			<li>
+				Downloads are done using a secure access hash which expire after use. The same download link can not be used multiple times.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Detailed File Statistics:</strong>
+		<ul>
+			<li>
+				Daily, weekly, monthly downloads.</li>
+			<li>
+				Referring sites.</li>
+			<li>
+				Visiting countries.</li>
+			<li>
+				Visiting browsers.</li>
+			<li>
+				Visiting operating systems.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Sharing:</strong>
+		<ul>
+			<li>
+				Links to share files &amp; folders via Facebook, Twitter, LinkedIn &amp; more.</li>
+			<li>
+				If a folder is set as private, generate a unique url to enable someone without an account to access it.</li>
+			<li>
+				Send via email option on all folders.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Security:</strong>
+		<ul>
+			<li>
+				Account password stored using SHA256 &amp; PBKDF2 key extender.</li>
+			<li>
+				Set file folders and private or public.</li>
+			<li>
+				Set passwords on file folders.</li>
+			<li>
+				IP blacklisting - block IP addresses from using the site.</li>
+			<li>
+				Support for https.</li>
+			<li>
+				Externally tested for XSS and SQL injection attacks.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Customisations:</strong>
+		<ul>
+			<li>
+				Written for PHP7.0+.</li>
+			<li>
+				100% full source code.</li>
+			<li>
+				Easy installation.</li>
+			<li>
+				Fully customisable.</li>
+			<li>
+				Modern template. (easily customise and create additional ones)</li>
+			<li>
+				Simple, clean, ajax style look and feel.</li>
+		</ul>
+	</li>
+	<li>
+		<strong>Admin Area:</strong>
+		<ul>
+			<li>
+				Separate dedicated admin area.</li>
+			<li>
+				Dashboard detailing downloads and active files.</li>
+			<li>
+				Search files.</li>
+			<li>
+				Disable files.</li>
+			<li>
+				Manage users and filter by user files.</li>
+			<li>
+				Manage blocked IPs.</li>
+			<li>
+				Manage site settings.</li>
+			<li>
+				Set and manage file servers.</li>
+			<li>
+				Configure to use specific file server or the one with most space.</li>
+			<li>
+				Set template.</li>
+			<li>
+				Amend account expiry date.</li>
+			<li>
+				Set user account settings:
+				<ul>
+					<li>
+						Days to keep inactive files.</li>
+					<li>
+						Maximum upload filesize.</li>
+					<li>
+						and more.</li>
+				</ul>
+			</li>
+			<li>
+				Option to set the filename on the download url.</li>
+			<li>
+				Modern Ajax interface.</li>
+		</ul>
+	</li>
+</ul>
+</section>
+<section id="support">
+	<div class="page-header"><h3>Support</h3><hr class="notop"></div>
+<p>
+	We have our own support portal that includes a support ticket system, knowledge base and forums, please register via our forum for full access.</p>
+<ul>
+	<li>
+		Support Forum - <a href="https://forum.mfscripts.com">https://forum.mfscripts.com</a></li>
+	<li>
+		Knowledge Base -&nbsp;<a href="https://support.mfscripts.com/public/kb/">https://support.mfscripts.com/public/kb/</a></li>
+	<li>
+		Ticketing System - <a href="https://support.mfscripts.com">https://support.mfscripts.com</a></li>
+</ul>
+<p>
+	Note: You will need to be have a valid license &amp; within your support period to access the ticketing system. You have lifetime access to the support forum and knowledge base included within your purchase.</p>
+<p>
+	<img alt="" src="assets/images/image_9.jpg" style="width: 900px; height: 388px;"></p>
+</section>
+<section id="system_requirements">
+	<div class="page-header"><h3>System Requirements</h3><hr class="notop"></div>
+<p>
+	uCloud is written in PHP7.0 and uses a MySQL5 database. uCloud is a &quot;Web Application&quot; that must be installed on a Web Server.</p>
+<p>
+	You must install uCloud on a web host that supports <strong>PHP7.0</strong>, <strong>MySQL5</strong> and <strong>Apache or Nginx</strong>.</p>
+<p>
+	You may also install uCloud on your personal computer by using one of the many options (i.e google WAMPserver or XAMPP), this is not covered in this document.</p>
+<p>
+	The full system requirements can be found below.</p>
+<ul>
+	<li>
+		PHP 7.0+</li>
+	<li>
+		MySQL 5+ with 1 empty database</li>
+	<li>
+		PHP PDO MySQL Extension</li>
+	<li>
+		PHP GD Extension (normally enabled as standard)</li>
+	<li>
+		Apache with Rewrite Module or Nginx</li>
+	<li>
+		A Web Browser that supports HTML5/Javascript (IE9+, FireFox, Safari, Chrome)</li>
+</ul>
+</section>
+<section id="installation">
+	<div class="page-header"><h3>Installation</h3><hr class="notop"></div>
+<h4 id="installation_installation_wizard">Installation Wizard</h4>
+<p>
+	We&#39;ve built an installation wizard into the script to make it really easily to get started.&nbsp;</p>
+<ol>
+	<li>
+		Download the zip file from CodeCanyon.</li>
+	<li>
+		Extract the contents into a folder on your computer.</li>
+	<li>
+		Using a FTP client (such as FileZilla), upload the extracted contents to your web host. Note: You can install uCloud as the main site, in a sub-folder on your existing web hosting or setup a new subdomain.</li>
+	<li>
+		While it&#39;s uploading you can create the database. Login via your web host control panel (such as cPanel) and create an empty database.</li>
+	<li>
+		Setup a new MySQL user and ensure you assign it to your new database with all privileges. Note your new MySQL username, database and password for later.</li>
+	<li>
+		Once the FTP upload has completed, via your web browser go to:&nbsp;</li>
+</ol>
+<p>
+	<img alt="" src="assets/images/image_3.jpg" style="width: 295px; height: 54px; margin-left: 50px;"></p>
+<ol start="7">
+	<li>
+		Follow the steps shown in the install wizard. Enter your MySQL details when prompted and the database will be automatically installed.</li>
+	<li>
+		Setup the cron tasks, links provided within the installer, or here - <a href="https://support.mfscripts.com/public/kb_view/26/">https://support.mfscripts.com/public/kb_view/26/</a> every 5 minutes (more info below in the CRON section).</li>
+	<li>
+		Done - Enjoy!</li>
+</ol>
+<p>
+	If you have any issues with the installation, please see the troubleshooting section of this document.</p>
+<h4 id="installation_file_amp_folder_permissions">File &amp; Folder Permissions</h4>
+<p>
+	During the uCloud install 1 file and 4 folders will need write permissions. Ensure the following have CHMOD 755 (or 777 depending on what your web host allows)</p>
+<ul>
+	<li>
+		/_config.inc.php</li>
+	<li>
+		/files/</li>
+	<li>
+		/plugins/</li>
+	<li>
+		/logs/</li>
+	<li>
+		/cache/</li>
+</ul>
+<p>
+	<img alt="" src="assets/images/image_4.jpg" style="width: 900px; height: 719px;"></p>
+</section>
+<section id="cron_tasks">
+	<div class="page-header"><h3>Cron Tasks</h3><hr class="notop"></div>
+<p>	The cron tasks enable uCloud to send emails, tidy data (and other tasks) in the background. Please ensure these are setup as they are required by the script.</p>
+<p>	There are a number of ways to set these up. The best method is to use a Linux Cron style setup on the server itself. This will be the most reliable method. Although you can use one of the many free web cron services, these often only work once every 10-15 minutes, meaning that crons will take longer between runs.</p>
+<h4 id="cron_tasks_linux_crons">Linux Crons</h4>
+<ol>
+	<li>		Type crontab -e in your linux command line.</li>
+	<li>		Type in the following:</li>
+</ol>
+<pre style="margin-left: 40px;">
+0 0 * * * php /path/to/your/install/app/tasks/auto_prune.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<pre style="margin-left: 40px;">
+0 0 * * * php /path/to/your/install/app/tasks/create_internal_notifications.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<pre style="margin-left: 40px;">
+0 * * * * php /path/to/your/install/app/tasks/delete_redundant_files.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<pre style="margin-left: 40px;">
+0 0 * * * php /path/to/your/install/app/tasks/downgrade_accounts.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<pre style="margin-left: 40px;">
+*/5 * * * * php /path/to/your/install/app/tasks/process_file_queue.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<pre style="margin-left: 40px;">
+0 1 * * * php /path/to/your/install/app/tasks/create_email_notifications.cron.php &gt;&gt; /dev/null 2&gt;&amp;1</pre>
+<ol start="3">
+	<li>		Save</li>
+	<li>		crontab -l should now list the cron process</li>
+</ol>
+<p>	If you do not have access to the command line you might have access to the web hosting control panel that should allow this. Otherwise talk with your webhost.</p>
+</section>
+<section id="upgrading">
+	<div class="page-header"><h3>Upgrading</h3><hr class="notop"></div>
+<p>	Upgrading is fairly straight forward. Use the following guide to upgrade your existing install to a new release.</p>
+<p> <strong>IMPORTANT:</strong> If you're upgrading from prior 2.x, please see the "Upgrade from v1.x" guidance on the /install page.</p>
+<ol>
+	<li>		Download the latest version of the uCloud zip file</li>
+	<li>		Backup your MySQL database, any /files/ and the _config.inc.php file.</li>
+	<li>		Backup any custom code or changes you have made (these may be overwritten).</li>
+	<li>		Unzip the newly downloaded zip file onto your local computer.</li>
+	<li>		Upload these folders & contents to your install - /app, /plugins & /themes.</li>
+	<li>		Within your hosting control panel, load phpMyAdmin and select your new database. In the right-hand section click on &#39;import&#39;. Attach the the relevant sql patches from the directory `/install/resources/upgrade_sql_statements/` and submit the form. Choose all the patches between your current script version number and the latest, ensuring you do them in version number order. If there are none, you can ignore this step.</li>
+	<li>		Purge the application cache - you can do this via the script admin area, in site configuration.</li>
+	<li>		Done - Enjoy the upgrade!</li>
+</ol>
+</section>
+<section id="website_settings">
+	<div class="page-header"><h3>Website Settings</h3><hr class="notop"></div>
+<p>	The website settings can be found via the admin area. To access:</p>
+<ol>
+	<li>		Login via the /admin url using your site admin credentials.</li>
+	<li>		On the top menu hover over &#39;Configuration&#39;, then click on &#39;Site Settings&#39;.</li>
+	<li>		You&#39;ll see a screen similar to the following:</li>
+</ol>
+<p>	<img alt="" src="assets/images/image_8.jpg"></p>
+<ol start="4">
+	<li>		All the settings are categoried on the left-hand side. By clicking on any of these it will filter the view on the main part of the page.</li>
+	<li>		To edit, click &#39;edit&#39; on any of the values.</li>
+	<li>		Any changes are immediately reflected on the site.</li>
+</ol>
+</section>
+<section id="add_a_new_language">
+	<div class="page-header"><h3>Add A New Language</h3><hr class="notop"></div>
+<p>	uCloud supports any number of languages. All the text content is routed through the translations module and can be translated.</p>
+<p>	<img alt="" src="assets/images/image_5.jpg" style="width: 811px; height: 401px;"></p>
+<h4 id="add_a_new_language_add_new_language">Add New Language</h4>
+<ol>
+	<li>		Login to the admin area.</li>
+	<li>		Via the Configuration menu, click Translations.</li>
+	<li>		Click the &#39;Add Language&#39; button.</li>
+	<li>		Set the language name, Text Direction (only LTR) supported for now and the flag.</li>
+	<li>		Once added click on &#39;manage translations&#39; and you&#39;ll see each text entry that you can edit.</li>
+	<li>		You can also export &amp; import translations on the same screen if you&#39;d prefer to edit them offline.</li>
+	<li>		To set as the main site language click the &#39;Default&#39; checkbox on the &#39;Manage Languages&#39; screen.</li>
+</ol>
+<p>	Note: You may need to logout and back in to see the new language take affect.</p>
+<h4 id="add_a_new_language_translate_text_content">Translate Text Content</h4>
+<ol>
+	<li>		Load the &#39;languages&#39; page within the admin area.</li>
+</ol>
+<p>	<img alt="" src="assets/images/image_6.jpg" style="width: 900px; height: 286px;"></p>
+<ol start="2">
+	<li>		Click &#39;manage translations&#39; and search for the text you&#39;d like to translation.</li>
+	<li>		Once you&#39;ve found it, click &#39;edit&#39;.</li>
+	<li>		Click &#39;update&#39; once you&#39;re done. The translation will be immediately available on your site.</li>
+</ol>
+<p>	<img alt="" src="assets/images/image_7.jpg" style="width: 817px; height: 432px;"></p>
+</section>
+<section id="creating_a_new_theme">
+	<div class="page-header"><h3>Creating A New Theme</h3><hr class="notop"></div>
+<p>	You can create your own themes within uCloud so future updates to the theme part of the script don&#39;t overwrite any custom changes.</p>
+<p>	1) Create a new directory named your theme in /themes/. Lowercase alphanumeric and underscores only. i.e.</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+/themes/yourtheme/</pre>
+<p>	2) Copy the contents of /themes/cloudable/ into /themes/yourtheme/</p>
+<p>	3) In /themes/yourtheme/_theme_config.inc.php replace the parameters:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+$themeConfig[&#39;theme_name&#39;] = &#39;uCloud Theme&#39;; // the name of the theme
+$themeConfig[&#39;folder_name&#39;] = &#39;cloudable&#39;; // the folder name you just created
+$themeConfig[&#39;theme_description&#39;] = &#39;uCloud Main Theme&#39;; // theme description shown in the admin area
+$themeConfig[&#39;author_name&#39;] = &#39;<span style="line-height: 1.42857;">uCloud</span><span style="line-height: 1.42857;">&#39;; // your name</span>
+</pre>
+<p>	4) Rename /themes/yourtheme/themeCloudable.class.php to /themes/yourtheme/themeNewtheme.class.php, ensuring you make the first letter of the theme name uppercase and the rest lowercase.</p>
+<p>	5) Open /themes/yourtheme/themeNewtheme.class.php&nbsp;and change line 3 from:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+class themecloudable extends Theme</pre>
+<p>	<span style="color: rgb(102, 102, 102); font-family: Arial, sans-serif; font-size: 13px; background-color: rgb(245, 245, 245);">to</span></p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+class themenewtheme extends Theme</pre>
+<p>	<span style="color: rgb(102, 102, 102); font-family: Arial, sans-serif; font-size: 13px; background-color: rgb(245, 245, 245);">6) You should now be able to enable the theme via your script admin area. The admin area thumbnail can be found in:</span></p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+/themes/yourtheme/thumb_preview.png</pre>
+<p>	&nbsp;</p>
+<p>	<img alt="" src="assets/images/image_10.jpg"  ></p>
+</section>
+<section id="adv_performance_tuning">
+	<div class="page-header"><h3>Adv Performance Tuning</h3><hr class="notop"></div>
+<p>	Your server configuration can have a significant impact on the performance of uCloud. Below are some of the server settings we&#39;d recommend using. It assumes you have at least a VPS server with root access and understand what you&#39;re doing!</p>
+<h4 id="adv_performance_tuning_apache">Apache</h4>
+<p>	- Enable XSendFile to take load away from PHP -&nbsp;<a href="https://support.mfscripts.com/public/kb_view/1/" target="_blank">https://support.mfscripts.com/public/kb_view/1/</a></p>
+<h4 id="adv_performance_tuning_nginx_recommended_over_apache_">Nginx (recommended over Apache)</h4>
+<p>	- Enable X-Accel-Redirect to take load away from PHP -&nbsp;<a href="https://support.mfscripts.com/public/kb_view/2/" target="_blank">https://support.mfscripts.com/public/kb_view/2/</a><br style="box-sizing: border-box; color: rgb(102, 102, 102); font-family: Arial, sans-serif; font-size: 13px;">
+	<br style="box-sizing: border-box; color: rgb(102, 102, 102); font-family: Arial, sans-serif; font-size: 13px;">
+	- Amend /etc/nginx/nginx.conf</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+http { 
+    #... 
+    fastcgi_read_timeout 300;
+    #... 
+}</pre>
+<p>	Restart Nginx after any changes.</p>
+<h4 id="adv_performance_tuning_php">PHP</h4>
+<p>	- Amend the following values in your global php.ini file:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+memory_limit = 512M
+upload_max_filesize = 500M
+post_max_size = 500M
+max_execution_time = 180
+max_input_time = 180</pre>
+<p>	Restart your webserver to apply the changes.</p>
+<h4 id="adv_performance_tuning_php_fpm_if_using_nginx_">PHP-FPM (if using Nginx)</h4>
+<p>	- Amend /etc/php5/fpm/pool.d/www.conf</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+request_terminate_timeout = 300
+<code style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: inherit; padding: 0px; color: inherit; white-space: pre-wrap; border-radius: 0px; background-color: transparent;">pm.max_children = 50
+</code></pre>
+<p>	Source for max_children -&nbsp;<a href="http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/" target="_blank">http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/</a></p>
+<h4 id="adv_performance_tuning_php_fast_cgi">PHP Fast CGI</h4>
+<p>	- If you&#39;re using FastCGI with PHP/Apache ensure you allow for any timeouts on large downloads, by default they will close connections after 5 minutes so you may get partially completed downloads. In your Apache config file add the following:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+&lt;IfModule mod_fcgid.c&gt;
+FcgidBusyTimeout 43200
+&lt;/IfModule&gt;</pre>
+<p>	If you&#39;re using WHM/cPanel you can add this to&nbsp;/usr/local/apache/conf/includes/post_virtualhost_global.conf<br>
+	<br>
+	Save and restart Apache.</p>
+<h4 id="adv_performance_tuning_mysql">MySQL</h4>
+<p>	1) Enable query cache.</p>
+<p>	Edit my.cnf file (sometimes in /etc/mysql/my.cnf)</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+nano /etc/mysql/my.cnf</pre>
+<p>	Add or uncomment the following lines:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+query_cache_size = 268435456
+query_cache_type = 1
+query_cache_limit = 1048576</pre>
+<p>	Restart MySQL. (this command will be different depending on your OS)</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+service mysql restart</pre>
+<p>	2) Increase max connections in MySQL. In your my.cnf file, add or amend the following:</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+max_connections = 600</pre>
+<p>	Save and restart MySQL. You may need to adjust this value depending on your traffic levels and server resources available.</p>
+<h4 id="adv_performance_tuning_other">Other</h4>
+<ul>	<li>		Use CloudFlare to reduce load, speed up website content to your users and protect against DOS attacks.</li>
+</ul>
+<h4 id="adv_performance_tuning_useful_links">Useful Links</h4>
+<ul>	<li>		MySQL How &amp; When to Enable Slow Query Logs:&nbsp;<a href="http://www.pontikis.net/blog/how-and-when-to-enable-mysql-logs" target="_blank">http://www.pontikis.net/blog/how-and-when-to-enabl...</a></li>
+	<li>		PHP Best Practice:&nbsp;<a href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html" target="_blank">http://www.cyberciti.biz/tips/php-security-best-pr...</a></li>
+	<li>		Install PHP SuHosin:&nbsp;<a href="http://www.cyberciti.biz/faq/centos-rhel-6-install-suhosin-php-advanced-protection-system/" target="_blank">http://www.cyberciti.biz/faq/centos-rhel-6-install...</a></li>
+</ul>
+</section>
+<section id="troubleshooting">
+	<div class="page-header"><h3>TroubleShooting</h3><hr class="notop"></div>
+<div>
+	<h4 id="troubleshooting_website_pages_and_download_links_not_working_after_install_404_errors_">Website pages and download links not working after install (404 errors)</h4>
+</div>
+<p>	<strong>Problem</strong></p>
+<p>	After installing the script none of the html links are working and neither are the generated file download urls.&nbsp;</p>
+<p>	<strong>Fix (Apache)</strong></p>
+<p>	This is generally one of the following issues:&nbsp;</p>
+<ul>	<li>		ModRewrite hasn&#39;t been enabled within Apache. Contact your host to have it enabled.</li>
+	<li>		You haven&#39;t uploaded the .htaccess included in the root of the script download. Sometimes certain operating systems don&#39;t show files starting with a dot. Ensure it&#39;s appearing in the root of your installation. Anti Virus software has also been known to hide the .htaccess so ensure this is temporarily disabled.</li>
+	<li>		You&#39;ve installed the script in a sub-folder. If this is the case you&#39;ll need to amend the .htaccess file to include your sub-folder path. In&nbsp;.htaccess find:</li>
+</ul>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+RewriteBase /
+</pre>
+<p>	Replace with:&nbsp;</p>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+RewriteBase /yoursubfolder/
+</pre>
+<ul>	<li>		If the .htaccess file has been uploaded, Apache may be set to ignore these files. In your Apache config file (sometimes called&nbsp;apache2.conf) set &quot;AllowOverride All&quot; similar to&nbsp;this:</li>
+</ul>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+&lt;Directory /var/www/&gt;
+	AllowOverride All
+&lt;/Directory&gt;
+</pre>
+<p>	<strong>Fix (Nginx)</strong></p>
+<p>	This is generally one of the following issues:&nbsp;</p>
+<ul>	<li>		The Nginx rewrite rules haven&#39;t been added to your Nginx site config file. See the &quot;___NGINX_RULES.txt&quot; file in the root of the script download for the correct Nginx rules.</li>
+	<li>		The path within your Nginx rules is incorrect. Ensure the root path points at your site root. Example:</li>
+</ul>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+root /usr/share/nginx/html;
+</pre>
+<ul>	<li>		You have not restarted Nginx after making the above changes. Restart via SSH. Example: (this will change depending on your Linux distro)</li>
+</ul>
+<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+sudo service nginx restart</pre>
+<div>
+	&nbsp;</div>
+<div>
+	<div>
+		<h4 id="troubleshooting_how_to_reset_the_admin_password_if_you_39ve_forgotten_it">How to reset the admin password if you&#39;ve forgotten it</h4>
+	</div>
+	<p>		<strong>Problem</strong></p>
+	<p>		You&#39;ve forgotten the admin password to your installation</p>
+	<p>		<strong>Fix</strong></p>
+	<p>		1) Try the forgot password form on yoursite.com/forgot_password.html</p>
+	<p>		2) If you can&#39;t remember the email address or it&#39;s invalid, you can reset it directly via the database.</p>
+	<p>		-&nbsp;Login via your MySQL client such as phpMyAdmin.<br>
+		- Execute the following sql on your database, replace ADMIN_USER with your admin username (usually &#39;admin&#39;) and NEW_PASSWORD with your new password.</p>
+	<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+UPDATE users SET password = MD5(&#39;NEW_PASSWORD&#39;) WHERE username=&#39;ADMIN_USER&#39;;</pre>
+	<p>		For example:</p>
+	<pre style="box-sizing: border-box; overflow: auto; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px; padding: 9.5px; margin-top: 0px; margin-bottom: 10px; line-height: 1.42857; color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; border-color: rgb(204, 204, 204); border-radius: 4px;">
+UPDATE users SET password = MD5(&#39;myp455w0rd&#39;) WHERE username=&#39;admin&#39;;</pre>
+</div>
+<div>
+	&nbsp;</div>
+<div>
+	<div>
+		<h4 id="troubleshooting_emails_are_not_being_sent_when_a_user_registers_on_the_site_or_when_the_contact_form_is_submitted">Emails are not being sent when a user registers on the site or when the contact form is submitted</h4>
+	</div>
+	<p>		<strong>Problem</strong></p>
+	<p>		When a user registers on the site they see the confirmation screen however they never receive an email with their password in it.</p>
+	<p>		<strong>Fix</strong></p>
+	<p>		This is due to a number of reasons, try each of the following in order:</p>
+	<p>		1) Test a registration yourself and ensure the email isn&#39;t being sent to a spam folder. If it is being spammed or if AOL/Hotmail accounts are not receiving emails, ensure you have SPF records setup for your domain. Your host or system admin can enable this.</p>
+	<p>		2) There are 2 methods the script uses to send email, PHP and SMTP. The default is PHP. Sometimes web hosts block PHP from sending to stop spam scripts from running so although PHP attempts to send the email, it doesn&#39;t actually go anywhere. If this is the case switch to SMTP sending via the admin area, site settings. (below)</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 10px; font-size: 13px; color: rgb(102, 102, 102); font-family: Arial, sans-serif;">
+		<img alt="smtp_screen.png" src="assets/images/image_12.png" style="box-sizing: border-box; border: 0px; vertical-align: middle; height: 468px; width: 900px;"></p>
+	<p style="box-sizing: border-box; margin: 0px 0px 10px; font-size: 13px; color: rgb(102, 102, 102); font-family: Arial, sans-serif;">
+		Set the options as shown above but replace with your own&nbsp;SMTP&nbsp;email settings. Your web host will be able to confirm these.</p>
+	<p style="box-sizing: border-box; margin: 0px 0px 10px; font-size: 13px; color: rgb(102, 102, 102); font-family: Arial, sans-serif;">
+		3) If the above doesn&#39;t work you can test SMTP sending for any errors. To test:</p>
+	<ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(102, 102, 102); font-family: Arial, sans-serif; font-size: 13px;">
+		<li style="box-sizing: border-box;">
+			Via FTP edit /admin/_test_scripts/test_email.php and replace the email address (&#121;&#111;&#117;&#64;&#121;&#111;&#117;&#114;&#101;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;) with your own.</li>
+		<li style="box-sizing: border-box;">
+			Re-upload the file to your website.</li>
+		<li style="box-sizing: border-box;">
+			Login to your /admin/ area.</li>
+		<li style="box-sizing: border-box;">
+			Then in the browser load this url maually -&nbsp;<a href="http://yoursite.com/admin/_test_scripts/test_email.php" style="box-sizing: border-box; color: rgb(42, 93, 159); text-decoration: none; background: transparent;" target="_blank">http://yoursite.com/admin/_test_scripts/test_email...</a></li>
+		<li style="box-sizing: border-box;">
+			An email will be attempted to the email address you entered. Any errors will be shown on screen. A common error is that the sending email address can not be used via that SMTP server so you may need to change the sending email address or ask your web&nbsp;host to allow it.</li>
+	</ul>
+	<p style="box-sizing: border-box; margin: 0px 0px 10px; font-size: 13px; color: rgb(102, 102, 102); font-family: Arial, sans-serif;">
+		Note: Sometimes not all debug messages are captured and outputted in the test_email.php script above. You can increase the debug level by temporarily editing the code. In coreFunctions.class.php find&nbsp;$mail-&gt;SMTPDebug = 1; and replace with&nbsp;$mail-&gt;SMTPDebug = 2; Save, reupload and test again for more detailed information.</p>
+</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="changelog">
+	<div class="page-header"><h3>Changelog</h3><hr class="notop"></div>
+
+<h4 id="changelog_version_12_18_03_2016_">Version 2.0 (20/08/2020)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Support for uploading additional files without reloading the browser.
+- Complete core rewrite:
+--- New MVC script framework.
+--- Separation of business logic (PHP) and views.
+--- Custom page url routing.
+--- Friendly urls throughout main site and admin area.
+--- Twig templating engine - True separation of PHP logic and views.
+--- Javascript translations moved to external JS file rather than embedded in the page source.
+--- Application cache for increased performance - Routing Cache & Twig Template Cache.
+--- New MVC structure for both plugins and themes.
+--- Controllers and templates and be overridden at plugin and theme level.
+--- Added support for transparent pngs on avatars.
+--- Friendlier urls on direct file links. (removal of view.php)
+--- Moved towards object based data updates (ORM).
+--- New terms & privacy pages.
+--- Admin test tools.
+- Backblaze cloud file storage support.
+- New media player for videos and audio type files.
+--- Includes playback speed control, chromecast support and audio visualisation.
+- Social login plugin upgrade, including refreshing guidance.
+- Improved Sharing Functionality:
+--- Share files aswell as folders now.
+--- Select multiple files/folders to share at once, rather than folder only level.
+--- Admin manage sharing pages.
+--- Globally shared folders - admin can set folders to be accessed by all accounts.
+--- Moved shared folders/files into dedicated left navigation item.
+--- Email notification added on internal sharing.
+- Added option to set keywords and description on files.
+--- Keywords displayed on file details view, linked to search.
+--- Search feature now includes keywords and description.
+- Improvements to drop & drop uploads directly into file manager without loading the uploader popup.
+- Site setting option to use local sessions rather than database based sessions.
+- Site settings to control min/max length of account usernames.
+- Site setting to enable download tokens to be limited by IP address.
+- Minor formatting changes to file details page, including adding a back button.
+- Added sharing page and trash page links on mobile view.
+- Enabled 'enter' key submission on add/edit file/folder popups.
+- Minor fix to avoid reloading page if upload completes when viewing file details.
+- Minor fix to script update notification checker.
+
+Release notes: This release is a major upgrade to the codebase. To upgrade existing installs,
+please see the "Upgrade from v1.x" tab in the /install/ folder.</pre>
+
+<h4 id="changelog_version_12_18_03_2016_">Version 1.5 (01/04/2018)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Replacement of mcrypt functions with OpenSSL for PHP7.2+.
+- API changes - New admin only endpoints:
+--- /account/create
+--- /account/edit
+--- /account/delete
+--- /package/listing
+- Added optional CDN support for image previews and thumbnails. (via file server management)
+- Added optional captcha to user login screen.
+- Added optional captcha to admin login screen.
+- Big changes to how the delete file process works within the code:
+--- All deletes are now scheduled within the file action queue, including FTP, S3 and Flysystem adapters.
+--- Better management of file server paths - stored against the file server in the admin area.
+--- Removal of ajax calls to remote storage server on delete, significant performance improvement.
+- User file manager changes:
+--- Added folder ordering.
+--- Added select folder option, support for multiple as per files.
+--- Added multi folder delete & drag and drop to move.
+--- Added empty trash button to trash toolbar.
+--- Hold ctrl+click to select folders.
+--- Direct file link option for all files.
+- Admin area changes:
+--- Moved "Max File Uploads Per Day" into account packages.
+--- Moved "Accepted Upload File Types" into account packages.
+--- Moved "Blocked Upload File Types" into account packages.
+--- Added option to auto clear trash items older than x days in account packages.
+- Better feedback on login failures for the admin area.
+- Better handling of core FTP storage when passive mode is enabled.
+- Improvements to how the account avatar is loaded to avoid restrictions on certain servers.
+- Fix to Amazon S3 storage configuration issue.
+- File server option to download over different protocol compared with main site.
+- Moved the local storage path from _config.inc.php into the file server admin.
+- All database tables changed to 'InnoDB' & 'utf8mb4_general_ci' to allow for MySQL clustering support.
+
+Release Notes: There are database changes within this release. See /install/resources/upgrade_sql_statements/v1.4.2 - v1.5.sql.</pre>
+
+<h4 id="changelog_version_12_18_03_2016_">Version 1.4 (24/06/2017)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Flysystem integration. Core script initial support for file storage on:
+--- SFTP
+--- Amazon S3
+--- Rackspace Cloud Files
+--- FTP (via Flysystem, possible future replacement of core FTP storage)
+- File Upload API:
+--- Account Operations: Get account info, get account package info (max upload size, account limits etc).
+--- File Operations: Upload, Download, Get info, Edit meta data, Delete, Move, Copy.
+--- Folder Operations: Create, List (Files and Folders), Get info, Edit meta data, Delete, Move.
+- Admin Area:
+--- Admin area interface rewrite so it's now using Bootstrap 3.
+--- Bulk import tool. Within the admin area bulk import files into an account from on a folder on your server.
+--- Added user avatar to manage users page.
+--- Added option to remove or set avatar on add/edit user.
+--- Fix to add/edit user password setting. Now uses the global password rules.
+- Better support for prepared arguments in the database layer.
+- Fix to search widget not always displaying the correct file results.
+- Fix to ordering of files in file manager.
+- Updated social login plugin - Fixed Facebook not working due to API changes.
+- Facebook login - removed the request for date or birth, town and about me, in permissions.
+- Added additional database indexes to improve performance.
+- Fixed session notice in later versions of PHP - session_write_close(): Failed to write session data (user).
+- Fixed SMTP sending issues caused by debug being enabled within email sending library.
+- Fixed issue with folder zip download not being fully recursive.
+
+Release Notes: There are database changes within this release. See /install/resources/upgrade_sql_statements/v1.3.4 - v1.4.sql.</pre>
+
+<h4 id="changelog_version_12_18_03_2016_">Version 1.3 (14/10/2016)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Internally shared folders. Share any folder with other registered users and enable them to view, upload and download files.
+- Added support for default albums on new account creation/registration. Can be set via the admin, site settings.
+- Improvements to stats logging performance and sync between the stats count and file.visits value.
+- Admin Area:
+--- Added option to bulk remove files by copying and pasting a list of urls.
+--- Fix to add/edit user password setting. Now uses the global password rules.
+- Fixed admin area 12 months new files chart.
+- Improvement to ipToCountry checking for larger IP ranges.
+- Better support for prepared arguments in the database layer.
+- Various improvements and minor bug fixes.
+
+NOTE: There are database changes in this release. See \install\resources\upgrade_sql_statements\v1.2.3 - v1.3.sql</pre>
+
+<h4 id="changelog_version_12_18_03_2016_">Version 1.2 (18/03/2016)</h4>
+<pre class="prettyprint lang-plain linenums">
+- PHP7 support.
+- Login with your Facebook, Twitter or Google+ Account (optional setting via admin).
+- User registration page and relating admin settings:
+--- Whether to enable or disable the registration form.
+--- Whether to display the captcha on the site registration form.
+--- Block email address domains from registering. Comma separated list of domains.
+--- Block usernames from the registration page.
+- Automatic language translations via Google Translate API. Translate the entire site content to another language by clicking a button. Note: Requires a Google API key. Menually edited translations can be marked as &#39;locked&#39; so they&#39;re not overwritten.
+- Added support for username and password protected http &amp; ftp urls. In the format ftp://user:&#112;&#97;&#115;&#115;&#64;&#104;&#111;&#115;&#116;&#46;&#99;&#111;&#109;/filename.txt.
+- Improved session handling and how regularly the sessions are cleared from the database.
+- Reduced the amount of data stored in each session for bettter performance, from (up to) 65k to just over 1k.
+- Updated IP to Country data and added admin script to update the data as needed. (see the top of /core/includes/ip2Country.class.php)
+- Improved right &#39;next page&#39; arrow positioning when viewing files. Allows for easier scrolling of documents.
+- Allowed for files to be dragged into folder icons on the main view.
+- Added menu down arrow on folder icons.
+- Admin Area:
+--- Added option in admin to block the same file from being re-uploaded. Optional on file remove and automatic after removal on abuse reports.
+--- Added admin &quot;impersonate user&quot; option, so admin users can login as any other user account.
+--- Added new admin page for backing up the database and codebase. Functionality also built in preparation for automatic upgrades at a later date.
+--- Admin option to set blocked keywords within the filename on file uploads.
+--- Added option to temporarily disable file uploads globally via the admin area, site settings. Uploads will still function for admin accounts.
+--- Added option to temporarily disable file downloads globally via the admin area, site settings. Downloads will still function for admin accounts.
+- Fixed issue with file move between external file servers.
+- Various other UI fixes and improvements.
+
+NOTE: There are database changes in this release. See \install\resources\upgrade_sql_statements\v1.1 - v1.2.sql</pre>
+<h4 id="changelog_version_11_01_21_2016_">Version 1.1 (01/21/2016)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Added watermarking of images by folder option. Upload a png watermark, set the position and padding. This can then be enabled by folder. Use this to share &#39;proof&#39; copies of images to customers without giving the user full access to the image.
+- Added an option to hide or show the download button when sharing folders.
+- Automatic language translations via Google Translate API. Translate the entire site content to another language by clicking a button. Note: Requires a Google API key.
+- Added admin, theme settings option to add custom CSS code. This is kept between upgrades of the code.
+- Added admin, theme settings option to set the logo on the publicly shared pages.
+- Support for previewing animated gifs.
+- Added &#39;download all images&#39; as zip file option when folder is shared.
+- Fix to hide OG image if file is set as private or requires a password.
+- Reduced the maximum size of portrait images when previewing, better fit for common screen resolutions.
+- Improved UI layout on mobile preview of images.
+- Other minor updates and improvements.
+
+<strong>NOTE</strong>: There is database changes in this release. See /install/resources/upgrade_sql_statements/v1.0 - v1.1.sql</pre>
+<h4 id="changelog_version_10_01_07_2016_">Version 1.0 (01/07/2016)</h4>
+<pre class="prettyprint lang-plain linenums">
+- Initial release.</pre>
+<h4 id="changelog__nbsp">&nbsp;</h4>
+<p>
+	&nbsp;</p>
+</section>
+<section id="license_credits">
+	<div class="page-header"><h3>License & Credits</h3><hr class="notop"></div>
+<h4 id="license_credits_license">License</h4>
+<p>	This program was developed by MFScripts Ltd and is copyrighted.</p>
+<p>	THIS SOFTWARE AND THE ACCOMPANYING FILES ARE PROVIDED &quot;AS IS&quot; AND WITHOUT WARRANTIES OF ANY KIND WHETHER EXPRESSED OR IMPLIED.</p>
+<p>	In no event shall the author or MFScripts Ltd be held liable for any damages whatsoever, including without limitation, damages for loss of business profits, business interruption, loss of business information, or any other loss arising from the use or inability to use the software.</p>
+<p>	Your purchase of uCloud allows you to install a <strong>SINGLE</strong> (one) copy of uCloud on ONE server. You may not resell, distribute or rent uCloud.</p>
+<h4 id="license_credits_credits">Credits</h4>
+<h4 id="license_credits_mfscripts_ltd">MFScripts Ltd</h4>
+<ul>	<li>		Adam Wilson - Lead Developer</li>
+	<li>		Simon Nooranvary - Responsiveness &amp; Application Testing</li>
+</ul>
+<h4 id="license_credits_3rd_party_code">3rd Party Code</h4>
+<p>	A number of MIT, LGPL and other copyrighted libraries and resources have been used in this program. These copyrights remain the property of their owners.</p>
+<p>	Some of these libraries include:</p>
+<ul>	<li>		PHPMailer</li>
+	<li>		jQuery</li>
+	<li>		Bootstrap</li>
+</ul>
+<p>	If we have missed anything please let us know!</p>
+</section>
+<section id="wrap_up">
+	<div class="page-header"><h3>Wrap Up</h3><hr class="notop"></div>
+<p>	We&#39;ve spent the past 4 months building uCloud, plus years building and tuning the core framework however there&#39;s still lots more we can do. If you have any comments on how we can improve the script further feel free to post on our RFCs via the MFScripts forum or on CodeCanyon.</p>
+<p>	Thanks again for your continued support!</p>
+<p>	<strong>Adam Wilson &amp; Simon Nooranvary - MFScripts.com</strong></p>
+<p>	<a href="http://codecanyon.net/user/mfscriptsltd">http://codecanyon.net/user/mfscriptsltd</a></p>
+</section>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .modal {
+    text-align: center;
+  }
+  .modal:before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .modal .modal-dialog {
+    text-align: left;
+    margin: 10px auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

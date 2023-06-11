@@ -1,0 +1,14 @@
+/chat
+/quoteMaker
+/newvisit
+/medicalimage/radmed/
+/radmed.co.id/bot-tele
+/radmed.co.id/bot-tele-dev
+/radmed.co.id/saycis
+/radmed.co.id/uploadfile
+/medicalimage/logs/system/
+/medicalimage/logs/apache/
+/medicalimage/logs/apiv2/
+/medicalimage/logs/api_upload_handler
+/medicalimage/logs/banned_ips/
+/medicalimage/requests.log

@@ -1,0 +1,562 @@
+<?php return array (
+  0 => 
+  array (
+    'GET' => 
+    array (
+      '/admin/plugin/sociallogin/settings' => '\\plugins\\sociallogin\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/plugin/fileimport/settings' => '\\plugins\\fileimport\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/plugin/fileimport/ajax/folder_listing' => '\\plugins\\fileimport\\controllers\\admin\\PluginController/ajaxFolderListing',
+      '/admin/plugin/fileimport/download_import_script' => '\\plugins\\fileimport\\controllers\\admin\\PluginController/downloadImportScript',
+      '/admin/plugin/fileimport/process_file_import' => '\\plugins\\fileimport\\controllers\\admin\\PluginController/processFileImport',
+      '/admin/plugin/filepreviewer/settings' => '\\plugins\\filepreviewer\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/theme_settings/evolution' => '\\themes\\evolution\\controllers\\admin\\ThemeController/themeSettings',
+      '/index' => 'IndexController/index',
+      '/register' => 'IndexController/register',
+      '/register_complete' => 'IndexController/registerComplete',
+      '/terms' => 'IndexController/terms',
+      '/privacy' => 'IndexController/privacy',
+      '/down_for_maintenance' => 'IndexController/downForMaintenance',
+      '/js/translations.js' => 'IndexController/jsTranslations',
+      '/error' => 'IndexController/error',
+      '/api_upload_handler' => 'ApiController/apiUploadHandler',
+      '/assets/js/uploader.js' => 'AccountUploadController/uploaderJs',
+      '/file_password' => 'FileController/filePassword',
+      '/mobile/uploadfile' => 'ApiMobileController/uploadMobile',
+      '/ajax/file_upload_handler' => 'FileController/ajaxFileUploadHandler',
+      '/ajax/url_upload_handler' => 'FileController/ajaxUrlUploadHandler',
+      '/ajax/non_account_download_all_as_zip' => 'FileController/ajaxDownloadAllAsZip',
+      '/account/login' => 'AccountSecurityController/login',
+      '/account/forgot_password' => 'AccountSecurityController/forgotPassword',
+      '/account/forgot_password_confirm' => 'AccountSecurityController/forgotPasswordConfirm',
+      '/account/forgot_password_reset' => 'AccountSecurityController/forgotPasswordReset',
+      '/account/logout' => 'AccountSecurityController/logout',
+      '/account' => 'AccountController/index',
+      '/account/edit' => 'AccountSettingsController/edit',
+      '/account/register_complete' => 'AccountController/registerComplete',
+      '/account/search/' => 'AccountSearchController/search',
+      '/account/shared_with_me' => 'AccountFolderController/nonFolderFileManagerPage',
+      '/account/recent' => 'AccountFolderController/nonFolderFileManagerPage',
+      '/account/all_files' => 'AccountFolderController/nonFolderFileManagerPage',
+      '/account/trash' => 'AccountFolderController/nonFolderFileManagerPage',
+      '/account/ajax/home_v2_folder_listing' => 'AccountFolderController/ajaxHomeV2FolderListing',
+      '/account/ajax/empty_trash' => 'AccountFileController/ajaxEmptyTrash',
+      '/account/ajax/drag_files_into_folder' => 'AccountFileController/ajaxDragFilesIntoFolder',
+      '/account/ajax/share_file_folder_internally_remove' => 'AccountFolderController/ajaxShareFileFolderInternallyRemove',
+      '/account/ajax/update_view_type' => 'AccountSettingsController/ajaxUpdateViewType',
+      '/account/ajax/search_widget' => 'AccountSearchController/ajaxSearchWidget',
+      '/account/ajax/file_details_similar_files' => 'AccountFileController/ajaxFileDetailsSimilarFiles',
+      '/account/ajax/internal_notification_mark_all_read' => 'AccountSettingsController/ajaxInternalNotificationMarkAllRead',
+      '/account/ajax/existing_background_url_download' => 'FileController/ajaxExistingBackgroundUrlDownload',
+      '/admin/' => '\\app\\controllers\\admin\\DashboardController/index',
+      '/admin' => '\\app\\controllers\\admin\\DashboardController/indexRedirector',
+      '/admin/index' => '\\app\\controllers\\admin\\DashboardController/indexRedirector',
+      '/admin/login' => '\\app\\controllers\\admin\\DashboardController/login',
+      '/admin/logout' => '\\app\\controllers\\admin\\DashboardController/logout',
+      '/admin/setting_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/settingManage',
+      '/admin/banned_ip_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/bannedIpManage',
+      '/admin/translation_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManage',
+      '/admin/translation_manage_text' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageText',
+      '/admin/translation_manage_export' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageExport',
+      '/admin/translation_manage_import' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageImport',
+      '/admin/log_file_viewer' => '\\app\\controllers\\admin\\SiteConfigurationController/logFileViewer',
+      '/admin/background_task_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/backgroundTaskManage',
+      '/admin/background_task_manage_log' => '\\app\\controllers\\admin\\SiteConfigurationController/backgroundTaskManageLog',
+      '/admin/server_info' => '\\app\\controllers\\admin\\SiteConfigurationController/serverInfo',
+      '/admin/support_info' => '\\app\\controllers\\admin\\SiteConfigurationController/supportInfo',
+      '/admin/support_info_download' => '\\app\\controllers\\admin\\SiteConfigurationController/supportInfoDownload',
+      '/admin/database_browser' => '\\app\\controllers\\admin\\SiteConfigurationController/databaseBrowser',
+      '/admin/account_package_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/accountPackageManage',
+      '/admin/account_package_pricing_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/accountPackagePricingManage',
+      '/admin/api_documentation' => '\\app\\controllers\\admin\\ApiController/apiDocumentation',
+      '/admin/api_test_framework' => '\\app\\controllers\\admin\\ApiController/apiTestFramework',
+      '/admin/backup_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/backupManage',
+      '/admin/backup_download' => '\\app\\controllers\\admin\\SiteConfigurationController/backupDownload',
+      '/admin/file_manage' => '\\app\\controllers\\admin\\FileController/fileManage',
+      '/admin/export_csv' => '\\app\\controllers\\admin\\FileController/exportCSV',
+      '/admin/file_manage_action_queue' => '\\app\\controllers\\admin\\FileController/fileManageActionQueue',
+      '/admin/download_current' => '\\app\\controllers\\admin\\FileController/downloadCurrent',
+      '/admin/download_previous' => '\\app\\controllers\\admin\\FileController/downloadPrevious',
+      '/admin/system_update' => '\\app\\controllers\\admin\\SiteConfigurationController/systemUpdate',
+      '/admin/purge_application_cache' => '\\app\\controllers\\admin\\SiteConfigurationController/purgeApplicationCache',
+      '/admin/theme_manage' => '\\app\\controllers\\admin\\ThemeController/themeManage',
+      '/admin/theme_manage_add' => '\\app\\controllers\\admin\\ThemeController/themeManageAdd',
+      '/admin/user_manage' => '\\app\\controllers\\admin\\UserController/userManage',
+      '/admin/user_add' => '\\app\\controllers\\admin\\UserController/userAdd',
+      '/admin/user_login_history' => '\\app\\controllers\\admin\\UserController/userLoginHistory',
+      '/admin/plugin_manage' => '\\app\\controllers\\admin\\PluginController/pluginManage',
+      '/admin/plugin_manage_add' => '\\app\\controllers\\admin\\PluginController/pluginManageAdd',
+      '/admin/server_manage' => '\\app\\controllers\\admin\\ServerController/serverManage',
+      '/admin/server_manage_direct_get_config_file' => '\\app\\controllers\\admin\\ServerController/serverManageDirectGetConfigFile',
+      '/admin/server_manage_test_flysystem' => '\\app\\controllers\\admin\\ServerController/serverManageTestFlysystem',
+      '/admin/server_manage_test_direct' => '\\app\\controllers\\admin\\ServerController/serverManageTestDirect',
+      '/admin/server_manage_test_ftp' => '\\app\\controllers\\admin\\ServerController/serverManageTestFTP',
+      '/admin/sharing_manage' => '\\app\\controllers\\admin\\SharingController/sharingManage',
+      '/admin/download_page_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/downloadPageManage',
+      '/admin/test_tools' => '\\app\\controllers\\admin\\SiteConfigurationController/testTools',
+      '/admin/payment_manage' => '\\app\\controllers\\admin\\UserController/paymentManage',
+      '/admin/payment_subscription_manage' => '\\app\\controllers\\admin\\UserController/paymentSubscriptionManage',
+      '/admin/file_report_manage_bulk_remove' => '\\app\\controllers\\admin\\FileReportController/fileReportManageBulkRemove',
+      '/admin/file_report_manage' => '\\app\\controllers\\admin\\FileReportController/fileReportManage',
+      '/admin/test_tools/apache_xsendfile' => '\\app\\controllers\\admin\\TestToolsController/testApacheXsendfile',
+      '/admin/test_tools/create_database_backup' => '\\app\\controllers\\admin\\TestToolsController/testCreateDatabaseBackup',
+      '/admin/test_tools/curl' => '\\app\\controllers\\admin\\TestToolsController/testCurl',
+      '/admin/test_tools/email' => '\\app\\controllers\\admin\\TestToolsController/testEmail',
+      '/admin/test_tools/encryption' => '\\app\\controllers\\admin\\TestToolsController/testEncryption',
+      '/admin/test_tools/flysystem' => '\\app\\controllers\\admin\\TestToolsController/testFlysystem',
+      '/admin/test_tools/generate_password_hash' => '\\app\\controllers\\admin\\TestToolsController/testGeneratePasswordHash',
+      '/admin/test_tools/geocode_ip' => '\\app\\controllers\\admin\\TestToolsController/testGeocodeIp',
+      '/admin/test_tools/ip' => '\\app\\controllers\\admin\\TestToolsController/testIp',
+      '/admin/test_tools/omnipay_payment' => '\\app\\controllers\\admin\\TestToolsController/testOmnipayPayment',
+      '/admin/test_tools/output_buffering' => '\\app\\controllers\\admin\\TestToolsController/testOutputBuffering',
+      '/admin/test_tools/permissions' => '\\app\\controllers\\admin\\TestToolsController/testPermissions',
+      '/admin/test_tools/ports' => '\\app\\controllers\\admin\\TestToolsController/testPorts',
+      '/admin/test_tools/read_exif' => '\\app\\controllers\\admin\\TestToolsController/testReadExif',
+      '/admin/test_tools/update_ip_class_file' => '\\app\\controllers\\admin\\TestToolsController/testUpdateIpClassFile',
+      '/admin/test_tools/upload' => '\\app\\controllers\\admin\\TestToolsController/testUpload',
+      '/admin/api' => '\\app\\controllers\\admin\\AdminApiController/api',
+      '/admin/ajax/check_for_upgrade' => '\\app\\controllers\\admin\\DashboardController/ajaxCheckForUpgrade',
+      '/admin/ajax/dashboard_chart_12_months_chart' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChart12MonthsChart',
+      '/admin/ajax/dashboard_chart_14_day_chart' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChart14DayChart',
+      '/admin/ajax/dashboard_chart_14_day_users' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChart14DayUsers',
+      '/admin/ajax/dashboard_chart_file_status_chart' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChartFileStatusChart',
+      '/admin/ajax/dashboard_chart_file_type_chart' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChartFileTypeChart',
+      '/admin/ajax/dashboard_chart_user_status_chart' => '\\app\\controllers\\admin\\DashboardController/ajaxDashboardChartUserStatusChart',
+      '/admin/ajax/banned_ip_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBannerIpManage',
+      '/admin/ajax/account_view_avatar' => '\\app\\controllers\\admin\\DashboardController/ajaxAccountViewAvatar',
+      '/admin/ajax/translation_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManage',
+      '/admin/ajax/translation_manage_text' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageText',
+      '/admin/ajax/background_task_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBackgroundTaskManage',
+      '/admin/ajax/background_task_manage_log' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBackgroundTaskManageLog',
+      '/admin/ajax/account_package_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackageManage',
+      '/admin/ajax/account_package_pricing_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackagePricingManage',
+      '/admin/ajax/file_manage' => '\\app\\controllers\\admin\\FileController/ajaxFileManage',
+      '/admin/ajax/file_manage_auto_complete' => '\\app\\controllers\\admin\\FileController/ajaxFileManageAutoComplete',
+      '/admin/ajax/file_manage_action_queue' => '\\app\\controllers\\admin\\FileController/ajaxFileManageActionQueue',
+      '/admin/ajax/download_current' => '\\app\\controllers\\admin\\FileController/ajaxDownloadCurrent',
+      '/admin/ajax/download_previous' => '\\app\\controllers\\admin\\FileController/ajaxDownloadPrevious',
+      '/admin/ajax/user_manage' => '\\app\\controllers\\admin\\UserController/ajaxUserManage',
+      '/admin/ajax/plugin_manage' => '\\app\\controllers\\admin\\PluginController/ajaxPluginManage',
+      '/admin/ajax/server_manage' => '\\app\\controllers\\admin\\ServerController/ajaxServerManage',
+      '/admin/ajax/server_manage_get_server_detail' => '\\app\\controllers\\admin\\ServerController/ajaxServerManageGetServerDetail',
+      '/admin/ajax/sharing_manage' => '\\app\\controllers\\admin\\SharingController/ajaxSharingManage',
+      '/admin/ajax/download_page_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxDownloadPageManage',
+      '/admin/ajax/payment_manage' => '\\app\\controllers\\admin\\UserController/ajaxPaymentManage',
+      '/admin/ajax/payment_subscription_manage' => '\\app\\controllers\\admin\\UserController/ajaxPaymentSubscriptionManage',
+      '/admin/ajax/file_report_manage' => '\\app\\controllers\\admin\\FileReportController/ajaxFileReportManage',
+      '/index.html' => 'LegacyController/index',
+      '/account_home.html' => 'LegacyController/accountIndex',
+      '/account_edit.html' => 'LegacyController/accountEdit',
+    ),
+    'POST' => 
+    array (
+      '/admin/plugin/sociallogin/settings' => '\\plugins\\sociallogin\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/plugin/fileimport/settings' => '\\plugins\\fileimport\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/plugin/filepreviewer/settings' => '\\plugins\\filepreviewer\\controllers\\admin\\PluginController/pluginSettings',
+      '/admin/theme_settings/evolution' => '\\themes\\evolution\\controllers\\admin\\ThemeController/themeSettings',
+      '/register' => 'IndexController/register',
+      '/api_upload_handler' => 'ApiController/apiUploadHandler',
+      '/file_password' => 'FileController/filePassword',
+      '/mobile/register' => 'ApiMobileController/register',
+      '/mobile/login' => 'ApiMobileController/login',
+      '/mobile/updatePassword' => 'ApiMobileController/updatePassword',
+      '/mobile/lupaPassword' => 'ApiMobileController/lupaPassword',
+      '/mobile/filefolder' => 'ApiMobileController/fileFolder',
+      '/mobile/folderUpload' => 'ApiMobileController/folderUpload',
+      '/mobile/getProfile' => 'ApiMobileController/getProfile',
+      '/mobile/updateProfile' => 'ApiMobileController/updateProfile',
+      '/mobile/uploadfile' => 'ApiMobileController/uploadMobile',
+      '/mobile/addBookmark' => 'ApiMobileController/addBookmark',
+      '/mobile/removeBookmark' => 'ApiMobileController/removeBookmark',
+      '/mobile/getFileBookmark' => 'ApiMobileController/getFileBookmark',
+      '/mobile/shareFile' => 'ApiMobileController/shareFile',
+      '/ajax/folder_password_process' => 'IndexController/folderPasswordProcess',
+      '/ajax/file_upload_handler' => 'FileController/ajaxFileUploadHandler',
+      '/ajax/update_file_options' => 'FileController/ajaxUpdateFileOptions',
+      '/account/login' => 'AccountSecurityController/login',
+      '/account/edit' => 'AccountSettingsController/edit',
+      '/account/ajax/login' => 'AccountSecurityController/ajaxLogin',
+      '/account/ajax/uploader' => 'AccountUploadController/ajaxUploader',
+      '/account/ajax/forgot_password' => 'AccountSecurityController/ajaxForgotPassword',
+      '/account/ajax/forgot_password_reset' => 'AccountSecurityController/ajaxForgotPasswordReset',
+      '/account/ajax/get_account_file_stats' => 'AccountFileController/ajaxGetAccountFileStats',
+      '/account/ajax/load_files' => 'AccountFolderController/ajaxLoadFiles',
+      '/account/ajax/edit_file' => 'AccountFileController/ajaxEditFile',
+      '/account/ajax/file_stats' => 'AccountFileController/ajaxFileStats',
+      '/account/ajax/file_details' => 'AccountFileController/ajaxFileDetails',
+      '/account/ajax/edit_file_process' => 'AccountFileController/ajaxEditFileProcess',
+      '/account/ajax/duplicate_file' => 'AccountFileController/ajaxDuplicateFile',
+      '/account/ajax/trash_files' => 'AccountFileController/ajaxTrashFiles',
+      '/account/ajax/delete_files' => 'AccountFileController/ajaxDeleteFiles',
+      '/account/ajax/restore_from_trash' => 'AccountFileController/ajaxRestoreFromTrash',
+      '/account/ajax/restore_from_trash_process' => 'AccountFileController/ajaxRestoreFromTrashProcess',
+      '/account/ajax/add_edit_folder' => 'AccountFolderController/ajaxAddEditFolder',
+      '/account/ajax/add_edit_folder_process' => 'AccountFolderController/ajaxAddEditFolderProcess',
+      '/account/ajax/share_file_folder' => 'AccountFolderController/ajaxShareFileFolder',
+      '/account/ajax/share_file_folder_internally' => 'AccountFolderController/ajaxShareFileFolderInternally',
+      '/account/ajax/share_file_folder_internally_existing' => 'AccountFolderController/ajaxShareFileFolderInternallyExisting',
+      '/account/ajax/email_folder_url' => 'AccountFolderController/ajaxEmailFolderUrl',
+      '/account/ajax/generate_folder_sharing_url' => 'AccountFolderController/ajaxGenerateFolderSharingUrl',
+      '/account/ajax/file_details_send_email_process' => 'AccountFileController/ajaxFileDetailsSendEmailProcess',
+      '/admin/login' => '\\app\\controllers\\admin\\DashboardController/login',
+      '/admin/logout' => '\\app\\controllers\\admin\\DashboardController/logout',
+      '/admin/setting_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/settingManage',
+      '/admin/banned_ip_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/bannedIpManage',
+      '/admin/translation_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManage',
+      '/admin/translation_manage_text' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageText',
+      '/admin/translation_manage_export' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageExport',
+      '/admin/translation_manage_import' => '\\app\\controllers\\admin\\SiteConfigurationController/translationManageImport',
+      '/admin/log_file_viewer' => '\\app\\controllers\\admin\\SiteConfigurationController/logFileViewer',
+      '/admin/background_task_manage' => '\\app\\controllers\\admin\\SiteConfigurationController/backgroundTaskManage',
+      '/admin/background_task_manage_log' => '\\app\\controllers\\admin\\SiteConfigurationController/backgroundTaskManageLog',
+      '/admin/database_browser' => '\\app\\controllers\\admin\\SiteConfigurationController/databaseBrowser',
+      '/admin/theme_manage_add' => '\\app\\controllers\\admin\\ThemeController/themeManageAdd',
+      '/admin/user_add' => '\\app\\controllers\\admin\\UserController/userAdd',
+      '/admin/plugin_manage_add' => '\\app\\controllers\\admin\\PluginController/pluginManageAdd',
+      '/admin/file_report_manage_bulk_remove' => '\\app\\controllers\\admin\\FileReportController/fileReportManageBulkRemove',
+      '/admin/test_tools/email' => '\\app\\controllers\\admin\\TestToolsController/testEmail',
+      '/admin/test_tools/upload' => '\\app\\controllers\\admin\\TestToolsController/testUpload',
+      '/admin/api' => '\\app\\controllers\\admin\\AdminApiController/api',
+      '/admin/ajax/banned_ip_manage_add_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBannedIpManageAddForm',
+      '/admin/ajax/banned_ip_manage_add_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBannedIpManageAddProcess',
+      '/admin/ajax/banned_ip_manage_remove' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxBannedIpManageRemove',
+      '/admin/ajax/translation_manage_text_set_is_locked' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageTextSetIsLocked',
+      '/admin/ajax/translation_manage_remove' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageRemove',
+      '/admin/ajax/translation_manage_add_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageAddForm',
+      '/admin/ajax/translation_manage_add_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageAddProcess',
+      '/admin/ajax/translation_manage_set_available_state' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageSetAvailableState',
+      '/admin/ajax/translation_manage_set_default_language' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageSetDefaultLanguage',
+      '/admin/ajax/translation_manage_text_edit_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageTextEditForm',
+      '/admin/ajax/translation_manage_text_edit_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageTextEditProcess',
+      '/admin/ajax/translation_manage_text_auto_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageTextAutoProcess',
+      '/admin/ajax/account_package_manage_add_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackageManageAddForm',
+      '/admin/ajax/account_package_manage_add_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackageManageAddProcess',
+      '/admin/ajax/account_package_pricing_manage_add_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackagePricingManageAddForm',
+      '/admin/ajax/account_package_pricing_manage_add_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxAccountPackagePricingManageAddProcess',
+      '/admin/ajax/file_manage_bulk_delete' => '\\app\\controllers\\admin\\FileController/ajaxFileManageBulkDelete',
+      '/admin/ajax/file_manage_edit_form' => '\\app\\controllers\\admin\\FileController/ajaxFileManageEditForm',
+      '/admin/ajax/file_manage_edit_process' => '\\app\\controllers\\admin\\FileController/ajaxFileManageEditProcess',
+      '/admin/ajax/file_manage_move_form' => '\\app\\controllers\\admin\\FileController/ajaxFileManageMoveForm',
+      '/admin/ajax/file_manage_move_process' => '\\app\\controllers\\admin\\FileController/ajaxFileManageMoveProcess',
+      '/admin/ajax/update_file_state' => '\\app\\controllers\\admin\\FileController/ajaxUpdateFileState',
+      '/admin/ajax/user_remove' => '\\app\\controllers\\admin\\UserController/ajaxUserRemove',
+      '/admin/ajax/user_approve' => '\\app\\controllers\\admin\\UserController/ajaxUserApprove',
+      '/admin/ajax/user_decline' => '\\app\\controllers\\admin\\UserController/ajaxUserDecline',
+      '/admin/ajax/get_user_folder_for_select' => '\\app\\controllers\\admin\\UserController/ajaxGetUserFolderForSelect',
+      '/admin/ajax/plugin_manage_install' => '\\app\\controllers\\admin\\PluginController/ajaxPluginManageInstall',
+      '/admin/ajax/plugin_manage_uninstall' => '\\app\\controllers\\admin\\PluginController/ajaxPluginManageUninstall',
+      '/admin/ajax/plugin_manage_delete' => '\\app\\controllers\\admin\\PluginController/ajaxPluginManageDelete',
+      '/admin/ajax/server_manage_add_form' => '\\app\\controllers\\admin\\ServerController/ajaxServerManageAddForm',
+      '/admin/ajax/server_manage_add_process' => '\\app\\controllers\\admin\\ServerController/ajaxServerManageAddProcess',
+      '/admin/ajax/server_manage_remove' => '\\app\\controllers\\admin\\ServerController/ajaxServerManageRemove',
+      '/admin/ajax/sharing_manage_remove' => '\\app\\controllers\\admin\\SharingController/ajaxSharingManageRemove',
+      '/admin/ajax/sharing_manage_add_form' => '\\app\\controllers\\admin\\SharingController/ajaxSharingManageAddForm',
+      '/admin/ajax/sharing_manage_add_get_folder_listing' => '\\app\\controllers\\admin\\SharingController/ajaxSharingManageAddGetFolderListing',
+      '/admin/ajax/sharing_manage_add_process' => '\\app\\controllers\\admin\\SharingController/ajaxSharingManageAddProcess',
+      '/admin/ajax/download_page_manage_add_form' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxDownloadPageManageAddForm',
+      '/admin/ajax/download_page_manage_add_process' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxDownloadPageManageAddProcess',
+      '/admin/ajax/download_page_manage_remove' => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxDownloadPageManageRemove',
+      '/admin/ajax/payment_manage_add_form' => '\\app\\controllers\\admin\\UserController/ajaxPaymentManageAddForm',
+      '/admin/ajax/payment_manage_add_process' => '\\app\\controllers\\admin\\UserController/ajaxPaymentManageAddProcess',
+      '/admin/ajax/payment_manage_detail' => '\\app\\controllers\\admin\\UserController/ajaxPaymentManageDetail',
+      '/admin/ajax/file_report_detail' => '\\app\\controllers\\admin\\FileReportController/ajaxFileReportDetail',
+      '/admin/ajax/file_report_accept' => '\\app\\controllers\\admin\\FileReportController/ajaxFileReportAccept',
+      '/admin/ajax/file_report_decline' => '\\app\\controllers\\admin\\FileReportController/ajaxFileReportDecline',
+    ),
+    'OPTIONS' => 
+    array (
+      '/api_upload_handler' => 'ApiController/apiUploadHandler',
+      '/ajax/file_upload_handler' => 'FileController/ajaxFileUploadHandler',
+    ),
+    'HEAD' => 
+    array (
+      '/ajax/file_upload_handler' => 'FileController/ajaxFileUploadHandler',
+    ),
+  ),
+  1 => 
+  array (
+    'GET' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/plugins/sociallogin/login/([^/]+)|/file/([^/]+)()|/file/([^/]+)/([^/]+)()|/cache/plugins/filepreviewer/([0-9]+)/pdf/([0-9]+)x([0-9]+)_([^/]+)_([^/]+)\\.jpg|/cache/plugins/filepreviewer/([0-9]+)/([^/]+)/([0-9]+)x([0-9]+)_([^/]+)\\.([^/]+)|/folder/([^/]+)()()()()()()|/folder/([^/]+)/([^/]+)()()()()()()|/shared/([^/]+)()()()()()()()()|/api/v2/([^/]+)()()()()()()()()()|/api/v2/([^/]+)/([^/]+)()()()()()()()()()|/([^/]+)\\~s()()()()()()()()()()()|/([^/]+)\\~i()()()()()()()()()()()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => '\\plugins\\sociallogin\\controllers\\SocialloginController/login',
+            1 => 
+            array (
+              'provider' => 'provider',
+            ),
+          ),
+          3 => 
+          array (
+            0 => '\\plugins\\filepreviewer\\controllers\\FilepreviewerController/directFile',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+            ),
+          ),
+          4 => 
+          array (
+            0 => '\\plugins\\filepreviewer\\controllers\\FilepreviewerController/directFile',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+              'fileName' => 'fileName',
+            ),
+          ),
+          6 => 
+          array (
+            0 => '\\plugins\\filepreviewer\\controllers\\FilepreviewerController/pdfThumbnail',
+            1 => 
+            array (
+              'fileId' => 'fileId',
+              'width' => 'width',
+              'height' => 'height',
+              'method' => 'method',
+              'md5PluginSettings' => 'md5PluginSettings',
+            ),
+          ),
+          7 => 
+          array (
+            0 => '\\plugins\\filepreviewer\\controllers\\FilepreviewerController/resizeImage',
+            1 => 
+            array (
+              'fileId' => 'fileId',
+              'fileHash' => 'fileHash',
+              'width' => 'width',
+              'height' => 'height',
+              'method' => 'method',
+              'extension' => 'extension',
+            ),
+          ),
+          8 => 
+          array (
+            0 => 'AccountFolderController/viewFolder',
+            1 => 
+            array (
+              'folderUrlHash' => 'folderUrlHash',
+            ),
+          ),
+          9 => 
+          array (
+            0 => 'AccountFolderController/viewFolder',
+            1 => 
+            array (
+              'folderUrlHash' => 'folderUrlHash',
+              'folderName' => 'folderName',
+            ),
+          ),
+          10 => 
+          array (
+            0 => 'AccountSharingController/viewShare',
+            1 => 
+            array (
+              'accessKey' => 'accessKey',
+            ),
+          ),
+          11 => 
+          array (
+            0 => 'ApiController/index',
+            1 => 
+            array (
+              'urlPart1' => 'urlPart1',
+            ),
+          ),
+          12 => 
+          array (
+            0 => 'ApiController/index',
+            1 => 
+            array (
+              'urlPart1' => 'urlPart1',
+              'urlPart2' => 'urlPart2',
+            ),
+          ),
+          13 => 
+          array (
+            0 => 'FileController/fileStats',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+            ),
+          ),
+          14 => 
+          array (
+            0 => 'FileController/fileInfo',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+            ),
+          ),
+        ),
+      ),
+      1 => 
+      array (
+        'regex' => '~^(?|/mobile/cekfolderown/([^/]+)|/ajax/non_account_download_all_as_zip_get_file/([^/]+)/([^/]+)|/account/avatar/([0-9]+)/([0-9]+)x([0-9]+)\\.png|/account/direct_download/([0-9]+)()()()|/account/ajax/download_all_as_zip/([0-9]+)()()()()|/account/ajax/download_all_as_zip_get_file/([^/]+)/([^/]+)()()()()|/account/ajax/remove_background_url_download/([^/]+)()()()()()()|/admin/purge_application_cache/([^/]+)()()()()()()()|/admin/theme_preview/([^/]+)()()()()()()()()|/admin/user_edit/([0-9]+)()()()()()()()()()|/admin/ajax/translation_manage_text_auto_convert/([^/]+)()()()()()()()()()()|/(.*)()()()()()()()()()()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => 'ApiMobileController/updateFolderOwned',
+            1 => 
+            array (
+              'RM' => 'RM',
+            ),
+          ),
+          3 => 
+          array (
+            0 => 'FileController/ajaxDownloadAllAsZipGetFile',
+            1 => 
+            array (
+              'fileName' => 'fileName',
+              'downloadZipName' => 'downloadZipName',
+            ),
+          ),
+          4 => 
+          array (
+            0 => 'AccountSettingsController/viewAccountAvatar',
+            1 => 
+            array (
+              'id' => 'id',
+              'width' => 'width',
+              'height' => 'height',
+            ),
+          ),
+          5 => 
+          array (
+            0 => 'AccountDownloadController/directDownload',
+            1 => 
+            array (
+              'fileId' => 'fileId',
+            ),
+          ),
+          6 => 
+          array (
+            0 => 'AccountFileController/ajaxDownloadAllAsZip',
+            1 => 
+            array (
+              'folderId' => 'folderId',
+            ),
+          ),
+          7 => 
+          array (
+            0 => 'AccountFileController/ajaxDownloadAllAsZipGetFile',
+            1 => 
+            array (
+              'fileName' => 'fileName',
+              'downloadZipName' => 'downloadZipName',
+            ),
+          ),
+          8 => 
+          array (
+            0 => 'FileController/ajaxRemoveBackgroundUrlDownload',
+            1 => 
+            array (
+              'gRemoveUrlId' => 'gRemoveUrlId',
+            ),
+          ),
+          9 => 
+          array (
+            0 => '\\app\\controllers\\admin\\SiteConfigurationController/purgeApplicationCache',
+            1 => 
+            array (
+              'doPurge' => 'doPurge',
+            ),
+          ),
+          10 => 
+          array (
+            0 => '\\app\\controllers\\admin\\ThemeController/themePreview',
+            1 => 
+            array (
+              'themeFolderName' => 'themeFolderName',
+            ),
+          ),
+          11 => 
+          array (
+            0 => '\\app\\controllers\\admin\\UserController/userEdit',
+            1 => 
+            array (
+              'userId' => 'userId',
+            ),
+          ),
+          12 => 
+          array (
+            0 => '\\app\\controllers\\admin\\SiteConfigurationController/ajaxTranslationManageTextAutoConvert',
+            1 => 
+            array (
+              'languageId' => 'languageId',
+            ),
+          ),
+          13 => 
+          array (
+            0 => 'FileController/downloadHandler',
+            1 => 
+            array (
+              'path' => 'path',
+            ),
+          ),
+        ),
+      ),
+    ),
+    'POST' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/plugins/sociallogin/login/([^/]+)|/api/v2/([^/]+)()|/api/v2/([^/]+)/([^/]+)()|/([^/]+)\\~s()()()|/([^/]+)\\~i()()()()|/admin/user_edit/([0-9]+)()()()()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => '\\plugins\\sociallogin\\controllers\\SocialloginController/login',
+            1 => 
+            array (
+              'provider' => 'provider',
+            ),
+          ),
+          3 => 
+          array (
+            0 => 'ApiController/index',
+            1 => 
+            array (
+              'urlPart1' => 'urlPart1',
+            ),
+          ),
+          4 => 
+          array (
+            0 => 'ApiController/index',
+            1 => 
+            array (
+              'urlPart1' => 'urlPart1',
+              'urlPart2' => 'urlPart2',
+            ),
+          ),
+          5 => 
+          array (
+            0 => 'FileController/fileStats',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+            ),
+          ),
+          6 => 
+          array (
+            0 => 'FileController/fileInfo',
+            1 => 
+            array (
+              'shortUrl' => 'shortUrl',
+            ),
+          ),
+          7 => 
+          array (
+            0 => '\\app\\controllers\\admin\\UserController/userEdit',
+            1 => 
+            array (
+              'userId' => 'userId',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);

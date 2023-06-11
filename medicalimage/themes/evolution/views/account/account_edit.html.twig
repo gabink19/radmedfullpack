@@ -1,0 +1,296 @@
+{% extends "account/partial/layout_logged_in.html.twig" %}
+
+{% block title %}{{ t("account_edit_page_name", "Account Details") }}{% endblock %}
+{% block description %}{{ t("account_edit_meta_description", "Account details") }}{% endblock %}
+{% block keywords %}{{ t("account_edit_meta_keywords", "details, account, short, url, user") }}{% endblock %}
+{% block selected_navigation_link %}settings{% endblock %}
+
+{% block body %}
+    <div class="main-content layer base-slide">
+        <ol class="breadcrumb bc-3">
+            <li>
+                <a href="{{ theme.getAccountWebRoot() }}"><i class="entypo-home"></i>{{ t("home", "Home") }}</a>
+            </li>
+            <li class="active">
+                <strong>{{ t("account_details", "Account Details") }}</strong>
+            </li>
+        </ol>
+
+        <div class="row">
+            <div class="col-sm-3 responsive-column">
+
+                <div class="tile-stats tile-red">
+                    <div class="icon"><i class="entypo-drive"></i></div>
+                    {% if totalFreeSpace != NULL %}
+                        <div data-delay="0" data-duration="1500" data-decimals="2" data-postfix="&nbsp;{{ totalFreeSpaceExt }}" data-end="{{ totalFreeSpaceSize }}" data-start="0" class="num">-</div>
+                    {% else %}
+                        <div class="num">{{ t("unlimited", "Unlimited") }}</div>
+                    {% endif %}
+                    <h3>{{ t("available_storage", "Available Storage") }}</h3>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3 responsive-column">
+
+                <div class="tile-stats tile-green">
+                    <div class="icon"><i class="entypo-upload"></i></div>
+                    <div data-delay="0" data-duration="1500" data-decimals="2" data-postfix="&nbsp;{{ totalActiveFileSizeExt }}" data-end="{{ totalActiveFileSizeSize }}" data-start="0" class="num">-</div>
+                    <h3>{{ t("used_storage", "Used Storage") }}</h3>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3 responsive-column">
+
+                <div class="tile-stats tile-aqua">
+                    <div class="icon"><i class="entypo-doc-text-inv"></i></div>
+                    <div data-delay="0" data-duration="1500" data-end="{{ totalActiveFiles }}" data-start="0" class="num">-</div>
+                    <h3>{{ t("active_files", "Active Files") }}</h3>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3 responsive-column">
+
+                <div class="tile-stats tile-blue">
+                    <div class="icon"><i class="entypo-down"></i></div>
+                    <div data-delay="0" data-duration="1500" data-end="{{ totalDownloads }}" data-start="0" class="num">-</div>
+                    <h3>{{ t("total_downloads", "Total Downloads") }}</h3>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+
+        <form class="form-horizontal form-groups-bordered" role="form" action="{{ theme.getAccountWebRoot() }}/edit" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div data-collapsed="0" class="panel panel-primary">
+
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ t('keep_your_account_details_up_to_date_below', 'Keep your account details up to date below.') }}
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="title">{{ t("title", "Title") }}</label>
+                                <div class="col-sm-5">
+                                    <select id="title" name="title" class="form-control" autofocus="autofocus" tabindex="1" data-content="{{ t('your_title', 'Your title') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                        <option value="Mr" {{ (title == 'Mr') ? 'SELECTED' : '' }}>{{ t('title_mr', 'Mr') }}</option>
+                                        <option value="Ms" {{ (title == 'Ms') ? 'SELECTED' : '' }}>{{ t('title_ms', 'Ms') }}</option>
+                                        <option value="Mrs" {{ (title == 'Mrs') ? 'SELECTED' : '' }}>{{ t('title_mrs', 'Mrs') }}</option>
+                                        <option value="Miss" {{ (title == 'Miss') ? 'SELECTED' : '' }}>{{ t('title_miss', 'Miss') }}</option>
+                                        <option value="Dr" {{ (title == 'Dr') ? 'SELECTED' : '' }}>{{ t('title_dr', 'Dr') }}</option>
+                                        <option value="Pro" {{ (title == 'Pro') ? 'SELECTED' : '' }}>{{ t('title_pro', 'Pro') }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="firstname">{{ t("firstname", "Firstname") }}</label>
+                                <div class="col-sm-5">
+                                    <input id="firstname" name="firstname" type="text" tabindex="2" value="{{ firstname }}" class="form-control" data-content="{{ t('your_firstname', 'Your firstname') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="lastname">{{ t("lastname", "Lastname") }}</label>
+                                <div class="col-sm-5">
+                                    <input id="lastname" name="lastname" type="text" tabindex="3" value="{{ lastname }}" class="form-control" data-content="{{ t('your_lastname', 'Your lastname') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="emailAddress">{{ t("email_address", "Email Address") }}</label>
+                                <div class="col-sm-5">
+                                    <input id="emailAddress" name="emailAddress" type="text" tabindex="4" value="{{ emailAddress }}" class="form-control" data-content="{{ t('your_new_email_address', 'Your new email address') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                </div>
+                            </div>
+
+                            {% if SITE_CONFIG_LANGUAGE_USER_SELECT_LANGUAGE == 'yes' %}
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="languageId">{{ t("language", "Language") }}</label>
+                                    <div class="col-sm-5">
+                                        <select id="languageId" name="languageId" class="form-control" tabindex="7" data-content="{{ t('settings_tip_site_language', 'The language to use on the site.') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                            {% for activeLanguage in activeLanguages %}
+                                                <option value="{{ activeLanguage.id }}"{% if languageId == activeLanguage.id %} SELECTED{% endif %}>{{ activeLanguage.languageName }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+
+                    <div data-collapsed="0" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ t("privacy", "Privacy")|title }}.
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            {% if SITE_CONFIG_FORCE_FILES_PRIVATE == 'no' %}
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="isPublic">{{ t("default_folder_privacy", "Default Folder Privacy")|title }}</label>
+                                    <div class="col-sm-5">
+                                        <select id="isPublic" name="isPublic" class="form-control" autofocus="autofocus" tabindex="8" data-content="{{ t('settings_tip_private_files_text', 'Whether to keep all files private or allow sharing. If this is set as public, you can still set folders as private.') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">  
+                                            <option value="1" {% if isPublic == 1 %}selected="selected"{% endif %}>{{ t('privacy_public_limited_access', 'Public - Access if users know the folder url.') }}</option>
+                                            <option value="0" {% if isPublic == 0 %}selected="selected"{% endif %}>{{ t('privacy_private_no_access', 'Private - No access outside of your account, unless you generate a unique access url.') }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <br/>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div data-collapsed="0" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ t('account_settings_change_password', 'Change password.') }}
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="password">{{ t("change_password", "Change Password") }}</label>
+                                <div class="col-sm-5">
+                                    <input id="password" name="password" type="password" tabindex="5" value="" class="form-control" data-content="{{ t('a_new_account_password_leave_blank_to_keep', 'Optional. A new account password, leave this blank to keep your existing.') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="passwordConfirm">{{ t("confirm_password_edit", "Confirm Password") }}</label>
+                                <div class="col-sm-5">
+                                    <input id="passwordConfirm" name="passwordConfirm" type="password" tabindex="6" value="" class="form-control" data-content="{{ t('a_new_account_password_confirm_leave_blank_to_keep', 'Optional. Confirm the password entered above, leave this blank to keep your existing.') }}" data-placement="right" data-trigger="hover focus" data-container="body" data-toggle="popover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div data-collapsed="0" class="panel panel-primary">
+
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ t('account_settings_avatar', 'Account avatar.') }}
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label for="avatar" class="col-sm-3 control-label">{{ t('account_settings_avatar_file', 'Select File (jpg, png or gif)') }}</label>
+                                <div class="col-sm-5">
+                                    <input type="file" class="form-control" id="avatar" name="avatar" placeholder="{{ t('account_settings_avatar_file', 'Select File (jpg, png or gif)') }}">
+                                    {% if hasAvatar == true %}
+                                        <br/>
+                                        <img class="img-square settings-avatar" src="{{ Auth.user.getAvatarUrl() }}">
+                                        <div class="checkbox" style="float: left;">
+                                            <label>
+                                                <input type="checkbox" id="removeAvatar" name="removeAvatar" value="1"/>{{ t('account_settings_avatar_remove', 'Remove avatar') }}
+                                            </label>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div data-collapsed="0" class="panel panel-primary">
+
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ t('account_settings_watermark', 'Optional image preview watermark. After upload, enable watermarking using each folder settings.') }}
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label for="watermark" class="col-sm-3 control-label">{{ t('account_settings_watermark_file', 'Select File (transparent png)') }}</label>
+                                <div class="col-sm-5">
+                                    <input type="file" class="form-control" id="watermark" name="watermark" placeholder="{{ t('account_settings_watermark_file', 'Select File (transparent png)') }}">
+                                    {% if hasWatermark == true %}
+                                        <br/>
+                                        <div class="checkbox" style="float: left;">
+                                            <label>
+                                                <input type="checkbox" id="removeWatermark" name="removeWatermark" value="1"/>{{ t('account_settings_watermark_remove', 'Remove watermark') }}
+                                            </label>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <br/>
+                                        <img src="{{ watermarkCacheUrl }}">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="watermarkPosition">{{ t("account_settings_watermark_position", "Watermark Position") }}</label>
+                                <div class="col-sm-5">
+                                    <select name="watermarkPosition" id="watermarkPosition" class="form-control">
+                                        {% for k,watermarkPositionOption in watermarkPositionOptions %}
+                                            <option value="{{ k }}"{% if watermarkPosition == k %} SELECTED{% endif %}>{{ watermarkPositionOption }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="watermarkPadding">{{ t("account_settings_watermark_padding", "Watermark Padding") }}</label>
+                                <div class="col-sm-5">
+                                    <div class="input-spinner"> <button type="button" class="btn btn-default">-</button> <input id="watermarkPadding" name="watermarkPadding" type="text" class="form-control size-1" value="{{ watermarkPadding is defined ? watermarkPadding : '10' }}" data-min="0" data-max="50"> <button type="button" class="btn btn-default">+</button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div data-collapsed="0" class="panel panel-primary">
+
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                    <input type="hidden" value="1" name="submitme"/>
+                                    <input type="hidden" name="privateFileStatistics" value="1"/>
+                                    <button class="btn btn-info" type="submit">{{ t("update_account", "update account")|title }} <i class="entypo-check"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
